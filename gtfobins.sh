@@ -20,4 +20,5 @@ do
 done
 
 rm priv4.txt
+# if you want 
 #open results.txt
