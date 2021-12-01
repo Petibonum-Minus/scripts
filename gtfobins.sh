@@ -20,4 +20,4 @@ do
 done
 
 rm priv4.txt
-open results.txt
+#open results.txt
