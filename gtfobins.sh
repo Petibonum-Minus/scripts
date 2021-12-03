@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # S'il y a internet sur l'hôte victime alors décommenter la ligne suivante :
-
 #find / -user root -perm /4000 2>/dev/null >> priv1.txt
 
+# Code principal
 cat priv1.txt | sed -e 's,/, ,g' >> priv2.txt
 grep -oE '[^ ]+$' priv2.txt >> priv3.txt
 sed 's/[[:blank:]]*$//;s/.*[[:blank:]]//' priv3.txt >> priv4.txt
@@ -20,5 +20,3 @@ do
 done
 
 rm priv4.txt
-# if you want 
-#open results.txt
