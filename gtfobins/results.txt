@@ -1,0 +1,7 @@
+Les potentielles élévations de privilège sont les suivantes : 
+mount
+mount +  end
+pkexec
+pkexec +  end
+su
+su +  end
