@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # S'il y a internet sur l'hôte victime alors décommenter la ligne suivante :
-#find / -user root -perm /4000 2>/dev/null >> priv1.txt
+find / -user root -perm /4000 2>/dev/null >> priv1.txt
 
 # Code principal
 cat priv1.txt | sed -e 's,/, ,g' >> priv2.txt
@@ -18,11 +18,11 @@ do
     
     if [ -z "$var" ]; then
         echo "Pour $line --> pas de résultat"
-else 
-    echo "Pour $line --> VICTOIRE un résultat !!"
-    echo $line >> results.txt
-    curl var=$(curl https://gtfobins.github.io/gtfobins/ash/ 2>/dev/null | grep "<pre><code>" | sed 's+<pre><code>++g' | sed 's+</code></pre>++g') >> results.txt;
-    echo $line + ' end' >> results.txt
+    else 
+        echo "Pour $line --> VICTOIRE un résultat !!"
+        echo $line >> results.txt
+        curl var=$(curl https://gtfobins.github.io/gtfobins/ash/ 2>/dev/null | grep "<pre><code>" | sed 's+<pre><code>++g' | sed 's+</code></pre>++g') >> results.txt;
+        echo $line + ' end' >> results.txt
 
 fi
 done
