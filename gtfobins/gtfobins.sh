@@ -28,3 +28,4 @@ fi
 done
 
 rm priv4.txt
+open results.txt
