@@ -22,7 +22,7 @@ do
         echo "Pour $line --> VICTOIRE un résultat !!"
         echo $line >> results.txt
         curl https://gtfobins.github.io/gtfobins/$line/ 2>/dev/null | grep "<pre><code>" | sed 's+<pre><code>++g' | sed 's+</code></pre>++g' >> results.txt;
-        echo $line + ' #############################################' >> results.txt
+        echo $line ' #############################################' >> results.txt
 
 fi
 done

