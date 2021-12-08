@@ -1,0 +1,39 @@
+set -g prefix M-x
+
+set -g base-index 1
+set -g pane-base-index 1
+set -g repeat-time 400
+# `prefix+[` to enter copy mode -> `space` to select -> `enter` to copy -> `prefix+]` to paste
+set -g mode-keys vi
+set -g mouse on
+
+bind v break-pane
+bind s set synchronize-panes
+bind b set pane-border-status
+bind S-Left swap-window -t -1
+bind S-Right swap-window -t +1
+
+bind - split-window -h
+bind ( split-window -v
+
+bind r source-file /etc/tmux.conf \; display "Reloaded !"
+bind \; command-prompt -p "Rename pane :" "select-pane -T '%%'"
+bind j command-prompt -p "Move current pane to window :" "join-pane -t '%%'"
+
+# --------------------
+# A E S T H E T I C
+# --------------------
+set -g status-left-length 100
+set -g status-left " #S "
+
+# set -g status-justify centre
+middle=" #I:#W#{?window_zoomed_flag,🔍,}#{?pane_synchronized,⚓,} "
+set -g window-status-format $middle
+# set -g window-status-style bg=colour240,fg=white
+set -g window-status-current-format $middle
+set -g window-status-current-style bg=black,fg=white,bold
+
+set -g status-right-length 100
+set -g status-right " #T    #[bold]%R#[nobold] %A %-d %B %Y "
+
+set -g pane-border-format " #{pane_title} "
