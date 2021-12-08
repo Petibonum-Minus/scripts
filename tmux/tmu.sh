@@ -1,6 +1,4 @@
-#ip 
-#!/bin/bash
-
+!/bin/bash
 # IP ?
 echo IP ?
 read ip
