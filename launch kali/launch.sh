@@ -19,6 +19,9 @@ cd && source .zshrc
 # Directory
 mkdir ~/Tools
 mkdir ~/Pentest
+mkdir ~/Pentest/THM/
+mkdir ~/Pentest/HTB/
+mkdir ~/VPN
 
 # Install Tools
 cd Tools && git clone https://github.com/Iole-Bri/scripts.git && git clone https://github.com/volatilityfoundation/volatility3.git && cd volatility3 && sudo python3 setup.py install && cd
