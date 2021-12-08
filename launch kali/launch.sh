@@ -3,6 +3,7 @@
 #sudo apt-get update && sudo apt-get full-upgrade -y
 #sudo apt-get install -y git-all git-clone tmux
 sudo cp ~/.zshrc ~/.zshrc.backup
+sudo cp ~/Tools/scripts/tmux/tmux_conf /etc/tmux.conf
 
 cd && echo "# others aliases" >> ~/.zshrc
 cd && echo "alias install='sudo apt-get install -y'" >> ~/.zshrc
