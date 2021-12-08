@@ -18,6 +18,6 @@ mkdir ~/Pentest
 
 # Install Tools
 cd Tools && git clone https://github.com/Iole-Bri/scripts.git && git clone https://github.com/volatilityfoundation/volatility3.git && cd volatility3 && sudo python3 setup.py install && cd
-cd Documents && git clone https://github.com/Spit22/GOTHAM.git && cd
+cd Documents && git clone https://github.com/Spit22/GOTHAM.git && https://github.com/Iole-Bri/Petibonum_docs.git && cd
 
 sudo ln -s ~/Tools/scripts/tmux/tmux.sh /usr/bin/Pentest
