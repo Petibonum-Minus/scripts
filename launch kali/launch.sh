@@ -5,12 +5,12 @@
 sudo cp ~/.zshrc ~/.zshrc.backup
 sudo cp ~/Tools/scripts/tmux/tmux_conf /etc/tmux.conf
 
-cd && echo "# others aliases" >> ~/.zshrc
-cd && echo "alias install='sudo apt-get install -y'" >> ~/.zshrc
-cd && echo "alias update='sudo apt-get update && sudo apt-get full-upgrade -y'" >> ~/.zshrc
+cd && echo "# others aliases" >> .zshrc
+cd && echo "alias install='sudo apt-get install -y'" >> .zshrc
+cd && echo "alias update='sudo apt-get update && sudo apt-get full-upgrade -y'" >> .zshrc
 cd && echo "alias purge='sudo apt-get purge -y'" >> ~/.zshrc
-cd && echo "alias fix='sudo apt-get --fix-broken install -y'" >> ~/.zshrc
-cd && echo "alias clean_remove='sudo apt-get autoremove -y && sudo apt-get autoclean -y'"
+cd && echo "alias fix='sudo apt-get --fix-broken install -y'" >> .zshrc
+cd && echo "alias clean_remove='sudo apt-get autoremove -y && sudo apt-get autoclean -y'" >> .zshrc
 cd && source .zshrc
 
 mkdir ~/Tools
