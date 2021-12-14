@@ -26,6 +26,7 @@ mkdir ~/VPN
 cd Tools && git clone https://github.com/Iole-Bri/scripts.git && cd
 cd Documents && git clone https://github.com/Spit22/GOTHAM.git && git clone https://github.com/Iole-Bri/Petibonum_docs.git && cd
 cd Tools && wget http://downloads.volatilityfoundation.org/releases/2.6/volatility_2.6_lin64_standalone.zip && unzip volatility_2.6_lin64_standalone.zip && rm volatility_2.6_lin64_standalone.zip && mv volatility_2.6_lin64_standalone volatility && cd volatility && sudo ln -s /home/kali/Tools/volatility/volatility_2.6_lin64_standalone /usr/bin/volatility && cd
+cd Tools && git clone https://github.com/danielmiessler/SecLists.git
 
 # Install Links
 sudo ln -s /home/kali/Tools/scripts/tmux/tmux_1.sh /usr/bin/pentestip
