@@ -13,7 +13,7 @@ tmux rename-window -t $session:1 "Monitor"
 # split first pane horizontal, then second pane vertical
 tmux split-window -t $session:1.1 -h
 tmux split-window -t $session:1.1 -v
-tmux send-keys -t $session:Monitor.1 "sudo openvpn VPN/petibonum.minus.ovpn" C-m
+tmux send-keys -t $session:Monitor.1 "sudo openvpn VPN/petibonum.minus2.ovpn" C-m
 tmux send-keys -t $session:Monitor.2 "while sleep 1; do clear; ip -br a | grep -v veth ; done" C-m
 
 # create new named window
