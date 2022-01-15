@@ -5,20 +5,39 @@ RED="\e[31m"
 GREEN="\e[32m"
 ENDCOLOR="\e[0m"
 
-# ASCII ART
-cat <<EOF
- ____   ____    .__          __  .__.__  .__  __           __________         __________        __  ._____.                                
-\   \ /   /___ |  | _____ _/  |_|__|  | |__|/  |_ ___.__. \______   \___.__. \______   \ _____/  |_|__\_ |__   ____   ____  __ __  _____  
- \   Y   /  _ \|  | \__  \\   __\  |  | |  \   __<   |  |  |    |  _<   |  |  |     ___// __ \   __\  || __ \ /  _ \ /    \|  |  \/     \ 
-  \     (  <_> )  |__/ __ \|  | |  |  |_|  ||  |  \___  |  |    |   \\___  |  |    |   \  ___/|  | |  || \_\ (  <_> )   |  \  |  /  Y Y  \
-   \___/ \____/|____(____  /__| |__|____/__||__|  / ____|  |______  // ____|  |____|    \___  >__| |__||___  /\____/|___|  /____/|__|_|  /
-                         \/                       \/              \/ \/                     \/             \/            \/            \/ 
-EOF
+# ASCII ART     
+figlet -t -k -f /usr/share/figlet/small.flf "VOLATILITY by Petibonum!!"
+
+# Intro
+echo -e "${GREEN}\nVolatility is use to analyze memory dump.
+Please use to volatility -h to see all function.${ENDCOLOR}"
+
+echo -e "${GREEN}All memory dump has to be stored in a specific folder wich is ~/Documents/Forensic/...${ENDCOLOR}"
+tree ~/Documents/Forensic/
 
 # Code Zone
-echo -e "${GREEN}
-\nVolatility is use to analyze memory dump.
-Please use to volatility -h to see all function.
-${ENDCOLOR}"
-echo -e "${GREEN}And this is some green text${ENDCOLOR}"
-bash --rcfile <(echo '. ~/.bashrc; ip -br a')
+## Select folder and file
+echo -e "${RED}Select folder ?${ENDCOLOR}"
+read folder
+echo -e "${RED}Select file ?${ENDCOLOR}"
+read file
+echo -e "${GREEN}You selected : ~/Documents/Forensic/$folder/$file ${ENDCOLOR}"
+
+## Image info
+volatility2 -f ~/Documents/Forensic/$folder imageinfo >> ~/Documents/Forensic/$folder/imageinfo.txt
+echo -e "${GREEN}Profiles : ${ENDCOLOR}" 
+sed "1q;d" ~/Documents/Forensic/$folder/imageinfo.txt
+
+## Select profile
+echo -e "${RED}Select the Profile you need :${ENDCOLOR}"
+read profile
+echo -e "${GREEN}You selected : $profile ${ENDCOLOR}"
+
+## Select command
+read -p "Your command:  " command
+    while [[ "$command" != "quit"]]
+    do
+    echo -e "${GREEN}You selected : $command ${ENDCOLOR}"
+    volatility2 -f ~/Documents/Forensic/OpenClassRoom/0C-002-memdump.mem --profile=Win7SP1x86_23418 $command >> ~/Documents/Forensic/OpenClassRoom/$command.txt
+    read -p "Your command:  " command
+    done
